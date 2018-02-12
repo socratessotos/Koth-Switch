@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Hat
+  - Liquid
+  - Level
+  - Bounce
+  - Lava
+  - Target
+  - Solid
+  - Ignore
+  - Balloon
+  - Through
+  - Icicle
+  - TransferDanger
+  - MiningCart
+  - Ice
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Solid
+  - Player 1
+  - Player 2
+  - Player 3
+  - Player 4
+  - Level
+  - BG
+  - NoCol
+  - Hat-Only
+  - Player-Only
+  - Trigger
+  - Player1Fire
+  - Player2Fire
+  - Player3Fire
+  - Player4Fire
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Back_VFX
+    uniqueID: 4062176553
+    locked: 0
+  - name: Players
+    uniqueID: 3196712481
+    locked: 0
+  - name: Front_VFX
+    uniqueID: 2771727153
+    locked: 0

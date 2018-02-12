@@ -1,0 +1,47 @@
+Rewired Nintendo Switch Plugin
+
+v7:
+
+  Changes:
+    - Changed minimum supported Nintendo SDK version to 3.4.0.
+    - Changed minimum supported Unity version to 5.6.2p4.
+    - Added Unity 2017 support.
+
+v6:
+  
+  Bug Fixes:
+    - Eliminated 384-500 byte memory allocation every frame due to List.Reverse call.
+
+v5:
+
+  Changes:
+    - Added support for the Debug Pad.
+
+  API Changes:
+    - Added Rewired.Platforms.Switch.DebugPadSettings class.
+    - Added Rewired.Platforms.Switch.Config.IDebugPadSettings interface.
+    - Added Rewired.Platforms.Switch.SwitchInput.Config.GetDebugPadSettings method.
+
+v4:
+
+  API Changes:
+    - Added Rewired.Platforms.Switch.SwitchInput.ControllerApplet class.
+    - Added Rewired.Platforms.Switch.ControllerAppletOptions class.
+    - Added Rewired.Platforms.Switch.ControllerAppletOptions.PlayerOptions class.
+    - Added Rewired.Platforms.Switch.ControllerAppletResult class.
+
+v3:
+
+  Changes:
+    - Added "Unmodified" option for Joy-Con Assignment Mode setting to allow leaving the currently set Joy-Con Assignment Mode settings on initialization.
+
+  API Changes:
+    - Added Rewired.Platforms.Switch.Config.JoyConAssignmentModeOption enum.
+    - Added Rewired.Platforms.Switch.Config.INpadSettings interface.
+    - NintendoSwitchInputManager.GetNpadSettings return type changed to Rewired.Platforms.Switch.Config.INpadSettings.
+
+v2:
+  - Fixed issue in newest versions of the Unity for Switch editor caused by breaking change in Unity PlayerSettings.Switch class.
+
+v1:
+  - Initial release.

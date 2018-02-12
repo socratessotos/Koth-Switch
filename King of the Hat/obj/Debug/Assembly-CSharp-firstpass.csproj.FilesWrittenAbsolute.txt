@@ -1,0 +1,92 @@
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEditor.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Mono.Cecil.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Unity.DataContract.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/socratessotos/GitLab/HAT-TV/hat-TV/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEditor.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Rewired_Core.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Rewired_OSX_Lib.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Mono.Cecil.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Unity.DataContract.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/socratessotos/GitLab/HAT-TV-MEGABOOTH/hat-TV/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEditor.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Rewired_Core.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Rewired_OSX_Lib.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Mono.Cecil.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Unity.DataContract.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/socratessotos/Desktop/HAT-TV Fun Ass Balance/HAT-TV-master-1510d0cb0c79891b1ee975132e060253204338ce/hat-TV/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEditor.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Rewired_Core.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Rewired_OSX_Lib.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Mono.Cecil.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Unity.DataContract.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/socratessotos/GitHub/King_of_the_Hat/King of the Hat/Temp/bin/Debug/Mono.Cecil.Mdb.dll

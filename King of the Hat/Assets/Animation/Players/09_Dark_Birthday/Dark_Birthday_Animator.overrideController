@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Dark_Birthday_Animator
+  m_Controller: {fileID: 9100000, guid: 93dafa5f0af6144cfaa09772771b0134, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2631f2919bc8f4cc69d1625456a9df72, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e6d011f6030bc4ddc8ce6857786b3faf, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3fb0e65f3043d447a82cc03e64a8ecf6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dd9248fecf89b4364a3ed99056d49926, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a5accca9a4e4c4a4da85f2dd4ebea8c2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6e1b5e48fa90246429422110276ee2a8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 18010b41091c3499f84f4cd417248444, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c0b2518287cf547dfb3937052faba94c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bf8af7ddc89e845ed8c1188f14991eff, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d2093ad2525284a99b521b9ae759b696, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f93f13497aac8413ea58712ed61032eb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: da10017a8169c4cbf9108ee4301298f7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7f46728617fad4d0d947a28ba7632eee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3bda7ccaba87a4bb08f8147469dd2461, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ff85fd5acf3e64bad98de25110f65ebb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a93e7b0fa13a14bfcb208d015d89c9e4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 504e491c5f54d429aaf3ca0167808753, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 504e491c5f54d429aaf3ca0167808753, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2c720d4e401b54f4990d39784930e30e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c720d4e401b54f4990d39784930e30e, type: 2}

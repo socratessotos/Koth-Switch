@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1720798012917154}
+  m_IsPrefabParent: 1
+--- !u!1 &1720798012917154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4961856975135014}
+  - component: {fileID: 114855957295686336}
+  - component: {fileID: 212885688771816296}
+  - component: {fileID: 61628226853878470}
+  - component: {fileID: 114428136151009598}
+  - component: {fileID: 95216408945940548}
+  - component: {fileID: 114387958722094396}
+  - component: {fileID: 114085069190830268}
+  m_Layer: 2
+  m_Name: Bird
+  m_TagString: Ignore
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4961856975135014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.33, y: -1.14, z: 0}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61628226853878470
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.1}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &95216408945940548
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42678ea96f6a1504aaa2b089fc394836, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114085069190830268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d7af61dc15a4525bb3453156ea5fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleColorSchemes:
+  - groupID: Blue
+    mainColor:
+      serializedVersion: 2
+      rgba: 4291395950
+    bellyColor:
+      serializedVersion: 2
+      rgba: 4293375898
+    outlineColor:
+      serializedVersion: 2
+      rgba: 4286592562
+    hatColor:
+      serializedVersion: 2
+      rgba: 4283308824
+  - groupID: Red
+    mainColor:
+      serializedVersion: 2
+      rgba: 4286604207
+    bellyColor:
+      serializedVersion: 2
+      rgba: 4290226639
+    outlineColor:
+      serializedVersion: 2
+      rgba: 4285087372
+    hatColor:
+      serializedVersion: 2
+      rgba: 4281668161
+  - groupID: Green
+    mainColor:
+      serializedVersion: 2
+      rgba: 4284135044
+    bellyColor:
+      serializedVersion: 2
+      rgba: 4289192901
+    outlineColor:
+      serializedVersion: 2
+      rgba: 4281957188
+    hatColor:
+      serializedVersion: 2
+      rgba: 4280112678
+--- !u!114 &114387958722094396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0119f06ec38dc4d3a8534d604e931ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorsToSwap:
+  - groupID: Main
+    rValue: 110
+    swapColor: {r: 0.43137258, g: 0.5058824, b: 0.78823537, a: 1}
+  - groupID: Belly
+    rValue: 154
+    swapColor: {r: 0.6039216, g: 0.7176471, b: 0.9058824, a: 1}
+  - groupID: Outline
+    rValue: 50
+    swapColor: {r: 0.19607845, g: 0.21176472, b: 0.5019608, a: 1}
+  - groupID: Hat
+    rValue: 24
+    swapColor: {r: 0.09411766, g: 0.10588236, b: 0.30588236, a: 1}
+--- !u!114 &114428136151009598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ae0c3d7722a4bc0b743f08432e661a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 16128
+  horizontalRayCount: 0
+  verticalRayCount: 0
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  collider: {fileID: 0}
+  maxSlopeAngle: 80
+  playerInput: {x: 0, y: 0}
+--- !u!114 &114855957295686336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ddd6c9c79a8ed458e655a0832a0fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  render: {fileID: 0}
+  aniController: {fileID: 0}
+  hopImpulse: {x: 8, y: 20}
+  maxSpeed: 10
+  drag: 0
+  friction: 2
+  gravity: 5
+  deathParticles: {fileID: 1522587967233700, guid: 4f902a25d99b246df9fda3e023905481,
+    type: 2}
+--- !u!212 &212885688771816296
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720798012917154}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2f9e0aaed87be4b99a3c9cf5d8d1b6f3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1098254815
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 26f447281ba0d45baa8b82dc53c01d07, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0

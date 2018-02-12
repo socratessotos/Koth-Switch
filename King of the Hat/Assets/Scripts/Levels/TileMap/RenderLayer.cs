@@ -1,0 +1,1 @@
+﻿public enum RenderLayer {GEOMETRY = 2000, FROM_SHADER = 3000, TRANSPARENT = 5000};
