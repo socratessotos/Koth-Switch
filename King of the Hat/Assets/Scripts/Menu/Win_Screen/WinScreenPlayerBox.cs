@@ -83,7 +83,7 @@ public class WinScreenPlayerBox : MonoBehaviour {
 
         if(input.snapshot.yAxis != 0 && currentState == State.STATS) {
 
-            scrollRect.velocity = Vector2.up * input.snapshot.yAxis * 500;
+            scrollRect.velocity = Vector2.up * input.snapshot.yAxis * 800;
 
         }
 

@@ -15,6 +15,7 @@ public class CharacterBox : MonoBehaviour {
     public Text characterName;
     public Animator characterNameAnim;
     public Text teamText;
+    public Image banner;
     int index = 0;
     int skinIndex = 0;
     int colorIndex = 0;
@@ -38,6 +39,10 @@ public class CharacterBox : MonoBehaviour {
 	void Awake () {
         scrollTimer = Time.time;
 	}
+
+    void OnEnable() {
+        UpdateBannerColor();
+    }
 
 	void Update () {
 
@@ -153,6 +158,8 @@ public class CharacterBox : MonoBehaviour {
 	}
 
 	public void JoinGame (InputController _input) {
+        banner.GetComponent<Animator>().SetTrigger("Join");
+    
         //show the character preview
         joinText.enabled = false;
 
@@ -167,6 +174,8 @@ public class CharacterBox : MonoBehaviour {
     }
 
     public void LeaveGame () {
+        banner.GetComponent<Animator>().SetTrigger("Leave");
+
         joinText.enabled = true;
         PlayerIsReady(false);
 
@@ -224,7 +233,8 @@ public class CharacterBox : MonoBehaviour {
             return;
 
 		GameController.instance.game.SetPlayer (playerNumber - 1, selectScreen.characters[index].characterPrefab, input, selectScreen.characters[index].emblem, selectScreen.characters[index].groupID, teamNumber, selectScreen.characters[index].preview);
-	}
+        UpdateBannerColor();
+    }
 
     public void PlayerIsReady(bool ready) {
         selectionVFX.SetActive(ready);
@@ -296,6 +306,12 @@ public class CharacterBox : MonoBehaviour {
         }
 
         teamText.text = teamName;
+
+    }
+
+    public void UpdateBannerColor() {
+
+        banner.sprite = selectScreen.bannerColors[teamNumber - 1];
 
     }
 

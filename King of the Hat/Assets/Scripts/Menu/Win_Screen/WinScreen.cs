@@ -10,6 +10,7 @@ public class WinScreen : MonoBehaviour {
     public Text winTextMask;
 
     public WinScreenPlayerBox[] playerBoxes;
+    public Sprite[] bannerColors;
 
     float[] timers = new float[4];
     public float quitTime = 4f;
@@ -33,6 +34,7 @@ public class WinScreen : MonoBehaviour {
         ConnectInput();
 
         SetPlayerBoxes();
+        UpdateBanners();
 
     }
 
@@ -42,23 +44,7 @@ public class WinScreen : MonoBehaviour {
 
         CheckIfPlayersReady();
 
-        for (int i = 0, l = timers.Length; i < l; i++) {
-
-            if (GameController.instance.playerInputs[i].snapshot.aButton.pressed && GameController.instance.playerInputs[i].snapshot.bButton.pressed) {
-
-                timers[i] += Time.fixedDeltaTime;
-
-                if (timers[i] > timers[biggestTimerIndex])
-                    biggestTimerIndex = i;
-
-                if (timers[i] >= quitTime)
-                    LeaveWinScreen();
-
-            } else {
-                timers[i] = 0;
-            }
-
-        }
+        CheckIfPlayerIsForceQuitting();
 
     }
 
@@ -75,6 +61,28 @@ public class WinScreen : MonoBehaviour {
         }
 
         Invoke("LeaveWinScreen", 1.5f);
+    }
+
+    void CheckIfPlayerIsForceQuitting() {
+
+        for (int i = 0, l = timers.Length; i < l; i++) {
+
+            if (GameController.instance.playerInputs[i].snapshot.startButton.pressed) {
+
+                timers[i] += Time.fixedDeltaTime;
+
+                if (timers[i] > timers[biggestTimerIndex])
+                    biggestTimerIndex = i;
+
+                if (timers[i] >= quitTime)
+                    LeaveWinScreen();
+
+            } else {
+                timers[i] = 0;
+            }
+
+        }
+
     }
 
     void LeaveWinScreen() {
@@ -174,6 +182,18 @@ public class WinScreen : MonoBehaviour {
         for (int i = 0; i < timers.Length; i++) {
             timers[i] = 0;
         }
+    }
+
+    void UpdateBanners() {
+        
+        for(int i = 0; i < playerBoxes.Length; i++) {
+
+            if (GameController.instance.game.currentPlayers[i] == null) continue;
+
+            playerBoxes[i].banner.GetComponent<Image>().sprite = bannerColors[GameController.instance.game.currentPlayers[i].teamNumber - 1];
+
+        }
+
     }
 
 }

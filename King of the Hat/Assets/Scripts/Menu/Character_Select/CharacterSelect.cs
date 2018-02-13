@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using Rewired;
 
 [System.Serializable]
@@ -20,8 +21,13 @@ public class PlayableCharacter {
 public class CharacterSelect : MonoBehaviour {
 
 	public CharacterBox[] characterBoxes;
-	public GameObject startButtonVFX;
+    public Sprite[] bannerColors;
 	public PlayableCharacter[] characters;
+
+    [Header("References")]
+    public GameObject startButtonVFX;
+    public Text title;
+    public Text titleMask;
 
     void Awake() {
         ReInput.ControllerDisconnectedEvent += OnControllerDisconnected;
@@ -29,7 +35,17 @@ public class CharacterSelect : MonoBehaviour {
 
     void OnEnable() {
 
+        SetTitle();
         ResetReadyState();
+
+    }
+
+    void SetTitle() {
+
+        string _currentGameMode = GameController.instance.game.GameModeToString(GameController.instance.game.currentGameMode);
+
+        title.text = _currentGameMode;
+        titleMask.text = _currentGameMode;
 
     }
 

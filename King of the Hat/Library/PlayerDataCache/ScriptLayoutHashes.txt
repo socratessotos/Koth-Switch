@@ -1,4 +1,4 @@
-
+WindowsStandalone
 8e25056bcf4f3cfca7c34a511b07a87d Assembly-CSharp.dll:PowerTools.SpriteAnim
 bbb48df456fdeae268b75ebf5b52fe7a Assembly-CSharp.dll:.RippleEffect
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WaterObject
@@ -120,7 +120,7 @@ b720e5cbc7779f4a97108d1bbb6332a5 Assembly-CSharp.dll:.PsychicLine
 cc897e31f90a455da1ad6fffc97043f1 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Antialiasing
 470c785722d7109ae86cad7b7f1bfa47 Assembly-CSharp.dll:.CameraFollow
 02f20cc0659be52c6437b10d8d4ea31c Assembly-CSharp.dll:.SurvivalModeSpawner
-4b836cbbb06ff51928f75e44dd3682f5 Assembly-CSharp.dll:.WinScreen
+e812e4beec9e86742cf77c27fa7b1f7b Assembly-CSharp.dll:.WinScreen
 978cb18b89b51c8bcc23148f1435e5b1 Assembly-CSharp.dll:.ParallaxObject
 a32f33d00a7a1fe2bf4c764c4b02d30d Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BloomAndFlares
 b9972849b438d8796fdfbe0b594e1176 Assembly-CSharp.dll:.Afterimage
@@ -198,7 +198,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 9b66c1621e117c24dc4113de95d98aa7 Assembly-CSharp.dll:.TransferDanger
 22df741b1a3c6d3b215ca28ad83c5a3f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenSpaceAmbientObscurance
 bade9de6d09348ba9b7c8c10129476b5 Assembly-CSharp.dll:.SpriteAbberation
-29d6c74b114ed99b051e9c9c1a4ab1c1 Assembly-CSharp.dll:.CharacterSelect
+b1be69c2982a4c228e9a0f84c580e20f Assembly-CSharp.dll:.CharacterSelect
 9704725f75b248929860df6797a19a65 Assembly-CSharp.dll:Rewired.UI.ControlMapper.InputBehaviorWindow
 f64bf6aa24f35718919f6adbb4e04425 Assembly-CSharp.dll:.ProceduralTileMap
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BoundDestroyer
@@ -239,7 +239,7 @@ a678a3e0507ef0a5b1dd2fc5362f5680 Assembly-CSharp.dll:.SteamventTrigger
 2e2f0e05e679178c817a8a3173469693 Assembly-CSharp.dll:Rewired.Demos.PressAnyButtonToJoinExample_GamePlayer
 6a16544178efd519a576bd4ca859eb5f Assembly-CSharp.dll:.ShadowManager
 88e745da281bc889e248b64cf4d72a54 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.SunShafts
-eb6b90df7cef6c2ba2c6c87f5b3eb3aa Assembly-CSharp.dll:.ModeData
+7af31cdadfdaf252e22a0d90264aa172 Assembly-CSharp.dll:.ModeData
 2f6b5f64d35ad413259e22168c8ac4d7 Assembly-CSharp.dll:.ChromaticRB
 eeab31c63db4c34d06973860f2e287b7 Assembly-CSharp.dll:Rewired.UI.ControlMapper.ThemeSettings
 858eae220b8847a47b4d4cc530c793f3 Assembly-CSharp.dll:.SpriteGlow
@@ -262,7 +262,7 @@ aadc208eb28678d7d4480136c5eadad1 Assembly-CSharp.dll:.VFXManager
 74620441d9a4a773393e585cd81eb746 Assembly-CSharp.dll:Rewired.UI.ControlMapper.UISliderControl
 67ffb16901d86012eaf556cbf5e58439 Assembly-CSharp.dll:.ShockwaveAbility
 0ea70f437b58d92cf4f15c8746110639 Assembly-CSharp.dll:SpriteParticleEmitter.UIParticleRenderer
-5590495fb45cf79087787745d2015ae8 Assembly-CSharp.dll:.CharacterBox
+8dd9135fc6d89e87248b27e3334af6ad Assembly-CSharp.dll:.CharacterBox
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.PostEffectsHelper
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Rewired.Demos.ControlRemappingDemo1
 b26b3a55de2a8cbeee573d45c8848f09 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenSpaceAmbientOcclusion
@@ -369,7 +369,7 @@ f216c63c5c775e708b4f8d67a39101a2 Assembly-CSharp.dll:.VFXLibrary
 e2a8fd4524fc2a3a236b7e7720b544a6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.EdgeDetection
 b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ColorCorrectionLookup
 8d9528604cf4c92a36787be621d61d1d Assembly-CSharp.dll:.MiningCart
-967670ce55880cf5022bd662b78cdfef Assembly-CSharp.dll:.ChannelInfo
+b08093d7d024c025487beffc7e64fe09 Assembly-CSharp.dll:.ChannelInfo
 dade8b3226f35214c1a4754f61331616 Assembly-CSharp.dll:Rewired.Demos.CustomControllerDemo_Player
 3ae0dad0b55a80319e1d57c2dce28da7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Tonemapping
 333099aa933059ef54b90d7b06b6bf7b Assembly-CSharp.dll:.ScreenSpaceRefractions
@@ -406,3 +406,4 @@ f5382482d8a0279e2e73be2dc3b6b09c Rewired_Core.dll:Rewired.ComponentControls.Touc
 028f1dd8dcdb0e2ebd379f84c8b344d2 Assembly-CSharp.dll:Rewired.UI.ControlMapper.CanvasScalerFitter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SingleHatWaterfall
 5d71b0d4384013ee958970d95a38680f Assembly-CSharp.dll:SpriteParticleEmitter.DynamicEmitterUI
+fad665eb61a412dcc9e0683fab327703 Assembly-CSharp.dll:.TeamsEmblemUI

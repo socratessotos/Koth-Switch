@@ -113,7 +113,7 @@ public class Lightning : MonoBehaviour {
     int offsetMod = 1;
     void DeterminePoints() {
 
-        lineRenderer.numPositions = numberOfPoints;
+        lineRenderer.positionCount = numberOfPoints;
 
         lineRenderer.SetPosition(0, origin.position);
 
@@ -143,7 +143,7 @@ public class Lightning : MonoBehaviour {
 
         buffer = new Vector3[numberOfPoints];
 
-        lineRenderer.numPositions = 1;
+        lineRenderer.positionCount = 1;
         if (currentFlicker == 0) {
             lineRenderer.SetPosition(0, originVector);
             buffer[0] = originVector;
@@ -178,8 +178,8 @@ public class Lightning : MonoBehaviour {
 
         if (growCounter++ % 3 == 0) {
 
-            if (lineRenderer.numPositions < numberOfPoints) {
-                lineRenderer.numPositions++;
+            if (lineRenderer.positionCount < numberOfPoints) {
+                lineRenderer.positionCount++;
                 growIndex++;
 
                 lineRenderer.SetPosition(growIndex, buffer[growIndex]);
@@ -230,7 +230,7 @@ public class Lightning : MonoBehaviour {
 
         currentWidth = startWidth;
 
-        lineRenderer.numPositions = 0;
+        lineRenderer.positionCount = 0;
         numberOfPoints = Random.Range(minSegments, maxSegments);
 
         CalculateNormal();

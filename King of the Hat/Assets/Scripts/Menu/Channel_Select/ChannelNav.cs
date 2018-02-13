@@ -35,9 +35,6 @@ public class ChannelNav : ControllerNav {
         for(int i = 0; i < menuOptions.Length; i++) {           
             menuOptions[i] = channelList.GetChild(i).GetComponent<RectTransform>();
 
-            //channelInfo.channels[i].channelNameText = channelList.GetChild(i).transform.GetChild(1).GetComponentInChildren<Text>();
-            //channelInfo.channels[i].channelNameText.text = channelInfo.channels[i].channelName;
-
         }
 
 
@@ -89,7 +86,8 @@ public class ChannelNav : ControllerNav {
             return;
         }
 
-		GameController.instance.game.SetGameMode(data.mode, data.modeValue);
+        GameController.instance.game.SetGameMode(data.mode, data.modeValue);
+        channelInfo.SetDefaultTeamNumbers(data.defaultTeamNumbers);
         GameController.instance.menuNav.GoToScreen(channelInfo.channels[index].nextMenu);
 
     }

@@ -89,7 +89,7 @@ public class Liquid : MonoBehaviour {
 		body = gameObject.AddComponent<LineRenderer> ();
 		body.sharedMaterial = surfaceMat;
 		body.sharedMaterial.renderQueue = 1000;
-		body.numPositions = nodeCount;
+		body.positionCount = nodeCount;
 
 		body.startWidth = 0f;
 		body.endWidth = 0f;

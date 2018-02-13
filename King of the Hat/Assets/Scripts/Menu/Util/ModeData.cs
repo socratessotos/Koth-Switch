@@ -6,4 +6,5 @@ public class ModeData : MonoBehaviour {
 
 	public Game.Mode mode;
 	public int modeValue;
+    public int[] defaultTeamNumbers;
 }

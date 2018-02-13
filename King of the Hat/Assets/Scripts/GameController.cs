@@ -104,7 +104,7 @@ public class GameController : MonoBehaviour {
             if(game.currentGameMode == Game.Mode.TIME) {
                 HandleTimer();
             }
-            //if (Input.GetKeyDown(KeyCode.P)) EndGame();
+
             if (game.IsOver()) {
                             
                 game.state = Game.State.OVER;
@@ -287,6 +287,9 @@ public class GameController : MonoBehaviour {
             case Game.Mode.SURVIVAL:
                 DetermineSurvivalBadges();
                 break;
+            case Game.Mode.TEAMS:
+                DetermineTeamsBadges();
+                break;
             default:
                 break;
         }
@@ -309,6 +312,34 @@ public class GameController : MonoBehaviour {
         for(int i = 0; i < scores.Length; i++) {
             DetermineRank(i, scores);
         }
+
+    }
+
+    void DetermineTeamsBadges() {
+
+        string winner;
+        int _winningTeam = 0;
+
+        if (game.teamScores[0] >= game.roundsPerGame) {
+            _winningTeam = 0;
+            winner = "Blue Team";
+        } else {
+            _winningTeam = 1;
+            winner = "Red Team";
+        }
+
+        for (int i = 0; i < game.currentPlayers.Length; i++) {
+
+            if (game.currentPlayers[i] == null) continue;
+
+            if (game.currentPlayers[i].teamNumber == _winningTeam + 1)
+                winScreenMenu.playerBoxes[i].AssignBadge(0);
+            else
+                winScreenMenu.playerBoxes[i].AssignBadge(1);            
+
+        }
+
+        winScreenMenu.SetWinText(winner);
 
     }
 

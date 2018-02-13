@@ -9,7 +9,6 @@ public class ChannelData {
     public RectTransform channelTransform;
     
     public string channelName;
-    public Text channelNameText;
     public Image channelIcon;
     public Game.Mode gameMode;
     public Sprite[] channelPreviews;
@@ -34,12 +33,12 @@ public class ChannelInfo : MonoBehaviour {
 
     [Header("References")]
     public Image channelPreviewBox;
-    public Text channelPreviewBoxTEMPKICKSTARTERLABEL;
     public Text descriptionBoxTitle;
     public Animator lockedRedFlashAnim;
     public Color unlockedDescriptionTitleColor;
     public Color lockedDescriptionTitleColor;
     public Text channelDescriptionBox;
+    public CharacterSelect charSelectScreen;
     [Space(5)]
 
     [Header("Data")]
@@ -81,6 +80,14 @@ public class ChannelInfo : MonoBehaviour {
     }
 
     public void AnimateRedFlashOnDescriptionBox() {
+
+    }
+
+    public void SetDefaultTeamNumbers(int[] _defaultTeamNumbers) {
+        
+        for(int i = 0; i < _defaultTeamNumbers.Length; i++) {
+            charSelectScreen.characterBoxes[i].teamNumber = _defaultTeamNumbers[i];
+        }
 
     }
 

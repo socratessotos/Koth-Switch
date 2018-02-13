@@ -14,17 +14,25 @@ public class PickTeamNav : ControllerNav {
 
     InputController inputController;
 
-    void Start () {
+    void Awake() {
         characterBox = GetComponentInParent<CharacterBox>();
+    }
+
+    void Start () {
         inputController = characterBox.input;
 
-        index = 0;
+        index = characterBox.teamNumber - 1;
         scrollTimer = Time.time;
 
-        SetLerpParameters(index);
+        MoveSelectionTo(index);
 
     }
-    
+
+    void OnEnable() {
+        index = characterBox.teamNumber - 1;
+        MoveSelectionTo(index);
+    }
+
     void Update() {
 
         input = Vector2.zero;
@@ -99,6 +107,13 @@ public class PickTeamNav : ControllerNav {
 
     }
 
+    public new void MoveSelectionTo(int _index) {
+        if (selector == null)
+            return;
+
+        selector.localPosition = menuOptions[_index].localPosition + Vector3.left * 170;
+    }
+
     public override void BackButtonPress() {
         //characterBox.ToggleTeamMenu (false);
         //also give control back to char select box
@@ -107,9 +122,11 @@ public class PickTeamNav : ControllerNav {
     public void ChooseTeam() {
         characterBox.teamNumber = index + 1;
 
-        characterBox.UpdateTeamTextAndColor();
+        //characterBox.UpdateTeamTextAndColor();
 
         GameController.instance.game.currentPlayers[characterBox.playerNumber - 1].SetTeamNumber(characterBox.teamNumber);
+
+        characterBox.UpdateBannerColor();
 
     }
 

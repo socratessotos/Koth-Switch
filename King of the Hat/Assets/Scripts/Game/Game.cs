@@ -25,7 +25,7 @@ public class Game {
     public float timeRemaining = 5;
     public int gameHatHp = 3;
 
-    public int[] teamScores = new int[4];
+    public int[] teamScores = new int[2];
 
     public float countdownTimer = 240;
 
@@ -97,7 +97,7 @@ public class Game {
 				playerInstance.gameObject.layer = LayerMask.NameToLayer ("Player " + (i + 1));
 
                 if (GameController.instance.game.currentGameMode == Game.Mode.TEAMS) {
-
+                    ResetTeamScores();
                 } else {
                     GameController.instance.playerDisplays[i].emblem.enabled = true;
                     GameController.instance.playerDisplays[i].emblem.sprite = currentPlayers[i].emblem;
@@ -176,18 +176,7 @@ public class Game {
 
                 break;
 
-            case Mode.TEAMS:
-                
-                for(int i = 0; i < currentPlayers.Length; i++) {
-
-                    if (currentPlayers[i] == null) continue;
-                    else {
-                        if(currentPlayers[i].teamNumber == i + 1) {
-                            teamScores[i] = 0;
-                        }
-                    } 
-
-                }
+            case Mode.TEAMS:                               
 
                 GameController.instance.gameModeUI.ToggleTeamsUI(true);
 
@@ -303,27 +292,27 @@ public class Game {
 
         } else if (currentGameMode == Game.Mode.TEAMS) {
 
-            int[] teamSums = new int[4];
+            int[] _teamMembersAlive = new int[2];
 
             for (int i = 0; i < currentPlayers.Length; i++) {
                 if (currentPlayers[i] == null) continue;
 
                 if(currentPlayers[i].isAlive)
-                    teamSums[currentPlayers[i].teamNumber - 1]++;
+                    _teamMembersAlive[currentPlayers[i].teamNumber - 1]++;
             }
 
             int teamsAlive = 0;
             int teamIndex = 0;
-            for(int i = 0; i < teamSums.Length; i++) {
-                if (teamSums[i] > 0) {
+            for(int i = 0; i < _teamMembersAlive.Length; i++) {
+                if (_teamMembersAlive[i] > 0) {
                     teamsAlive++;
-                    teamIndex = i;
+                    teamIndex = i + 1;
                 } 
             }
 
             if (teamsAlive == 1) {
                 //award score to team
-                IncrementTeamScore(teamIndex + 1);
+                IncrementTeamScore(teamIndex);
                 return true;
             }
 
@@ -394,21 +383,6 @@ public class Game {
 
     }
 
-    int CalculateTotalPointsOfTeam(int _teamIndex) {
-
-        int teamSum = 0;
-
-        for(int i = 0; i < currentPlayers.Length; i++) {
-            if (currentPlayers[i] == null) continue;
-
-            if(currentPlayers[i].teamNumber == _teamIndex) {
-                teamSum += currentPlayers[i].numberOfRoundsWon;
-            }
-        }
-
-        return teamSum;
-    }
-
     public void UpdateSurvivalModeScore() {
 
         GameController.instance.survivalModeScoreAnim.SetTrigger("Win");
@@ -423,11 +397,6 @@ public class Game {
 
         GameController.instance.survivalModeScoreText.text = _newScore.ToString();
         
-    }
-
-    public void Update2v2Score() {
-
-
     }
 
     void AnimateScoreIncrease() {
@@ -556,7 +525,8 @@ public class Game {
 
     void ResetTeamScores() {
         for(int i = 0; i < teamScores.Length; i++) {
-            teamScores[i] = -1;
+            teamScores[i] = 0;
+            SetTeamScoreText(i);
         }
     }
 
@@ -623,7 +593,7 @@ public class Game {
 
         switch(mode) {
             case Game.Mode.LASTHAT:
-                s = "Last Hat Standing";
+                s = "Free For All";
                 break;
             case Game.Mode.TEAMS:
                 s = "Teams";

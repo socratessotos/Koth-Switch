@@ -139,17 +139,6 @@ public class GameModeUI : MonoBehaviour {
 
         teamsModeUI.SetActive(enabled);
 
-        if (!enabled) return;
-
-        for(int i = 0; i < eachTeamsUI.Length; i++) {
-
-            if (GameController.instance.game.teamScores[i] != -1) {
-                eachTeamsUI[i].SetActive(true);
-            } else {
-                eachTeamsUI[i].SetActive(false);
-            }
-
-        }
     }
 
     public void CloseAllGameModeUI() {
