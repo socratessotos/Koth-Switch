@@ -44,13 +44,15 @@ public class DynamicPalette : MonoBehaviour {
 
 		spriteColors = new Color[colorSwapTex.width];
 
+        //color gets chosen
 		for (int i = 0; i < colorsToSwap.Length; i++) {
 			spriteColors[colorsToSwap[i].rValue] = colorsToSwap[i].swapColor;
 		}
 
+        //pixel color gets set
 		for (int i = 0; i < colorSwapTex.width; ++i)
 			colorSwapTex.SetPixel(i, 0, spriteColors[i]);
-
+        
 		colorSwapTex.Apply();
 
 	}

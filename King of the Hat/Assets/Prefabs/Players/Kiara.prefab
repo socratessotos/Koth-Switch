@@ -771,6 +771,8 @@ MonoBehaviour:
   alternateSkins:
   - altPlayer: {fileID: 22100000, guid: 89b544513044b4a189ccb948aed9dc28, type: 2}
     altHat: {fileID: 21300000, guid: 1cec526bcecd0474da16b03377e0fa14, type: 3}
+    blueTeamColorIndex: 3
+    redTeamColorIndex: 4
     altColors:
     - hatPalette:
       - groupID: 

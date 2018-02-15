@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class GameModeUI : MonoBehaviour {
 
-    //toggleUI
-    [Header ("Dev Tools")]
-    public GameObject emblemHolder;
-
     [Header("Last Hat Standing Game Mode")]
+    public GameObject emblemHolder;
     public GameObject[] lastHatModeUI;
     [Space(10)]
 
@@ -53,10 +50,12 @@ public class GameModeUI : MonoBehaviour {
 
     public void EnableModeSpecificUI() {
 
+        emblemHolder.SetActive(false);
         CloseAllGameModeUI();
 
         switch (GameController.instance.game.currentGameMode) {
             case Game.Mode.LASTHAT:
+                emblemHolder.SetActive(true);
                 ToggleLastHatStandingUI(true);               
                 break;
 

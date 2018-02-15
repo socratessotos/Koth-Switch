@@ -110,9 +110,10 @@ public class Game {
 
 				playerInstance.transform.parent = level.transform;
 
-				playerInstance.GetComponent <CharacterColorChanger> ().Init (
-			    GameController.instance.playerDisplays[i].skinIndex,
-			    GameController.instance.playerDisplays[i].colorIndex);
+                int _skinIndex = GameController.instance.playerDisplays[i].skinIndex;
+                int _colorIndex = GameController.instance.playerDisplays[i].colorIndex;
+
+                playerInstance.GetComponent <CharacterColorChanger> ().Init (_skinIndex, _colorIndex);
 
                 currentPlayers[i].SetStockImages();
                 SetScoreText(i);
@@ -153,6 +154,7 @@ public class Game {
         }
 
 		InitGameMode ();
+        //GameController.instance.gameModeUI.EnableModeSpecificUI();
         //GameController.instance.gameModeUI.EnableUI();
 
     }
@@ -482,7 +484,7 @@ public class Game {
     }
 
     void SetRandomEndGameQuote() {
-        switch (Random.Range(0, 5)) {
+        switch (Random.Range(0, 8)) {
             case 0:
                 GameController.instance.SetGameOverText("HAT'S A WRAP!");
                 break;
@@ -497,6 +499,15 @@ public class Game {
                 break;
             case 4:
                 GameController.instance.SetGameOverText("IS HAT ALL YOU GOT?");
+                break;
+            case 5:
+                GameController.instance.SetGameOverText("WHAT A HATASTROPHY!");
+                break;
+            case 6:
+                GameController.instance.SetGameOverText("THAT WAS HATLARIOUS!");
+                break;
+            case 7:
+                GameController.instance.SetGameOverText("HATS OFF!");
                 break;
             default:
                 GameController.instance.SetGameOverText("HAT'S A WRAP!");

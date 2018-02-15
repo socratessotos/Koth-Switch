@@ -1,39 +1,39 @@
 ----IL2CPP Arguments----
---convert-to-cpp --enable-array-bounds-check --compile-cpp --platform=Switch --architecture=ARM64 --configuration=Release --outputpath=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Native\SwitchPlayer.nss --cachedirectory=C:/Users/Kristov/Desktop/King of the Hat/Assets/../SwitchIL2CPPCache/il2cpp_cache --linker-flags=-lC:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\NativePlugins\Rewired_NintendoSwitch_NX64.a --plugin=C:/Program Files/Unity/Editor/Data/PlaybackEngines/Switch/Tools\Il2CppPlugin.dll --additional-include-directories=C:\Program Files\Unity\Editor\Data\PlaybackEngines\Switch\Tools/il2cpp\bdwgc/include --additional-include-directories=C:\Program Files\Unity\Editor\Data\PlaybackEngines\Switch\Tools/il2cpp\libil2cpp/include --additional-include-directories=C:/Program Files/Unity/Editor/Data/PlaybackEngines/Switch/Tools\il2cpp\libil2cpp\os --verbose --enable-stats --stats-output-dir=C:/Users/Kristov/Desktop/King of the Hat/Assets/../SwitchIL2CPPStats --libil2cpp-static --additional-defines=DEBUGMODE=0,UNITY_RELEASE=1,IL2CPP_USE_SOCKET_MULTIPLEX_IO=1 --map-file-parser=C:\Program Files\Unity\Editor\Data\Tools\MapFileParser\MapFileParser.exe --assembly=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp-firstpass.dll --assembly=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp.dll --assembly=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\UnityEngine.UI.dll --assembly=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\Rewired_Core.dll --assembly=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\UnityEngine.dll --generatedcppdir=C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\il2cppOutput
+--convert-to-cpp --enable-array-bounds-check --compile-cpp --platform=Switch --architecture=ARM64 --configuration=Release --outputpath=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Native\SwitchPlayer.nss --cachedirectory=C:/Users/Chris/Desktop/Koth GitHub/Koth-Switch/King of the Hat/Assets/../SwitchIL2CPPCache/il2cpp_cache --linker-flags=-lC:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\NativePlugins\Rewired_NintendoSwitch_NX64.a --plugin=C:/Program Files/Unity/Editor/Data/PlaybackEngines/Switch/Tools\Il2CppPlugin.dll --additional-include-directories=C:\Program Files\Unity\Editor\Data\PlaybackEngines\Switch\Tools/il2cpp\bdwgc/include --additional-include-directories=C:\Program Files\Unity\Editor\Data\PlaybackEngines\Switch\Tools/il2cpp\libil2cpp/include --additional-include-directories=C:/Program Files/Unity/Editor/Data/PlaybackEngines/Switch/Tools\il2cpp\libil2cpp\os --verbose --enable-stats --stats-output-dir=C:/Users/Chris/Desktop/Koth GitHub/Koth-Switch/King of the Hat/Assets/../SwitchIL2CPPStats --libil2cpp-static --additional-defines=DEBUGMODE=0,UNITY_RELEASE=1,IL2CPP_USE_SOCKET_MULTIPLEX_IO=1 --map-file-parser=C:\Program Files\Unity\Editor\Data\Tools\MapFileParser\MapFileParser.exe --assembly=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp-firstpass.dll --assembly=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp.dll --assembly=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\UnityEngine.UI.dll --assembly=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\Rewired_Core.dll --assembly=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\UnityEngine.dll --generatedcppdir=C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\il2cppOutput
 
 ----Assemblies Converted-----
-	C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp-firstpass.dll
-	C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp.dll
-	C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\UnityEngine.UI.dll
-	C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\Rewired_Core.dll
-	C:\Users\Kristov\Desktop\King of the Hat\Temp\StagingArea\Managed\UnityEngine.dll
+	C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp-firstpass.dll
+	C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\Assembly-CSharp.dll
+	C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\UnityEngine.UI.dll
+	C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\Rewired_Core.dll
+	C:\Users\Chris\Desktop\Koth GitHub\Koth-Switch\King of the Hat\Temp\StagingArea\Managed\UnityEngine.dll
 
 ----- il2cpp Statistics -----
 General:
-	Conversion Time: 20.018 s
+	Conversion Time: 58.972 s
 	Files Written: 141
-	String Literals: 6528
+	String Literals: 6530
 Methods:
-	Total Methods: 41724
-	Non-Generic Methods: 31000
+	Total Methods: 41736
+	Non-Generic Methods: 31012
 	Generic Type Methods: 8766
 	Generic Methods: 1958
 	Shared Methods: 10646
 	Methods with Tail Calls : 0
 Metadata:
-	Total: 5,312.9 kb
+	Total: 5,314.1 kb
 	String Literals: 51.0 kb
-	String Literal Data: 166.5 kb
-	Metadata Strings: 618.9 kb
+	String Literal Data: 166.6 kb
+	Metadata Strings: 619.1 kb
 	Events: 4.2 kb
-	Properties: 160.4 kb
-	Methods: 1,850.4 kb
+	Properties: 160.3 kb
+	Methods: 1,851.0 kb
 	Parameter Default Values: 3.9 kb
 	Field Default Values: 66.8 kb
 	Field and Parameter Default Values Data: 147.1 kb
 	Field Marshaled Sizes: 21.3 kb
 	Parameters: 536.0 kb
-	Fields: 318.1 kb
+	Fields: 318.2 kb
 	Generic Parameters: 9.9 kb
 	Generic Parameter Constraints: 0.7 kb
 	Generic Containers: 8.7 kb
@@ -41,12 +41,12 @@ Metadata:
 	Interfaces: 7.9 kb
 	VTables: 175.3 kb
 	Interface Offsets: 39.4 kb
-	Type Definitions: 412.9 kb
+	Type Definitions: 413.0 kb
 	RGCTX Entries: 13.4 kb
 	Images: 0.9 kb
 	Assemblies: 2.0 kb
-	Metadata Usage Lists: 148.2 kb
-	Metadata Usage Pairs: 434.2 kb
+	Metadata Usage Lists: 148.3 kb
+	Metadata Usage Pairs: 434.3 kb
 	Field Refs: 0.9 kb
 	Referenced Assemblies: 0.4 kb
 	Attribute Types Ranges: 57.3 kb
@@ -78,48 +78,48 @@ Compilation:
 
 
 ----Assembly Conversion Times----
-	Convert Assembly-CSharp (835.047700000001ms)
-	Convert Assembly-CSharp-firstpass (113.0065ms)
-	Convert Mono.Security (249.0142ms)
-	Convert mscorlib (2238.1281ms)
-	Convert Rewired_Core (2663.1523ms)
-	Convert Rewired_NintendoSwitch (93.0054ms)
-	Convert System (506.0289ms)
-	Convert System.Core (28.0015999999996ms)
-	Convert System.Xml (991.056700000001ms)
-	Convert UnityEngine (0ms)
-	Convert UnityEngine.AIModule (1ms)
-	Convert UnityEngine.AnimationModule (16.0009000000009ms)
-	Convert UnityEngine.AudioModule (20.0011000000004ms)
-	Convert UnityEngine.CoreModule (273.0157ms)
-	Convert UnityEngine.DirectorModule (0ms)
-	Convert UnityEngine.IMGUIModule (104.005999999999ms)
-	Convert UnityEngine.InputModule (4.0002000000004ms)
-	Convert UnityEngine.ParticleSystemModule (25.0014999999985ms)
-	Convert UnityEngine.Physics2DModule (15.0009000000009ms)
-	Convert UnityEngine.PhysicsModule (9.0005000000001ms)
-	Convert UnityEngine.TerrainModule (2.00010000000111ms)
-	Convert UnityEngine.TextRenderingModule (13.0006999999987ms)
-	Convert UnityEngine.TilemapModule (2.00009999999929ms)
-	Convert UnityEngine.UI (608.034799999999ms)
-	Convert UnityEngine.UIModule (13.0007000000005ms)
-	Convert UnityEngine.UnityWebRequestAudioModule (2.0002000000004ms)
-	Convert UnityEngine.UnityWebRequestModule (3.0002000000004ms)
-	Convert UnityEngine.UnityWebRequestTextureModule (2.00009999999929ms)
-	Convert UnityEngine.VRModule (3.00009999999929ms)
-	Convert UnityEngine.WindModule (0ms)
+	Convert Assembly-CSharp (2030.9021ms)
+	Convert Assembly-CSharp-firstpass (284.256099999999ms)
+	Convert Mono.Security (607.616300000002ms)
+	Convert mscorlib (8453.9218ms)
+	Convert Rewired_Core (6666.2319ms)
+	Convert Rewired_NintendoSwitch (205.547200000001ms)
+	Convert System (1998.3225ms)
+	Convert System.Core (125.3334ms)
+	Convert System.Xml (2892.1928ms)
+	Convert UnityEngine (12.0312000000013ms)
+	Convert UnityEngine.AIModule (18.0488000000005ms)
+	Convert UnityEngine.AnimationModule (46.6241000000009ms)
+	Convert UnityEngine.AudioModule (95.7543000000005ms)
+	Convert UnityEngine.CoreModule (820.682999999997ms)
+	Convert UnityEngine.DirectorModule (11.0288999999975ms)
+	Convert UnityEngine.IMGUIModule (510.357500000002ms)
+	Convert UnityEngine.InputModule (79.2111000000004ms)
+	Convert UnityEngine.ParticleSystemModule (101.269ms)
+	Convert UnityEngine.Physics2DModule (42.1131999999998ms)
+	Convert UnityEngine.PhysicsModule (60.661799999998ms)
+	Convert UnityEngine.TerrainModule (51.1360000000022ms)
+	Convert UnityEngine.TextRenderingModule (59.156500000001ms)
+	Convert UnityEngine.TilemapModule (39.1035999999986ms)
+	Convert UnityEngine.UI (1837.3874ms)
+	Convert UnityEngine.UIModule (118.815699999999ms)
+	Convert UnityEngine.UnityWebRequestAudioModule (17.0453000000016ms)
+	Convert UnityEngine.UnityWebRequestModule (15.0396000000001ms)
+	Convert UnityEngine.UnityWebRequestTextureModule (13.035100000001ms)
+	Convert UnityEngine.VRModule (22.0585999999967ms)
+	Convert UnityEngine.WindModule (11.531500000001ms)
 
 ----Misc Timing----
-	PreProcessStage: 670.0383
-	GenericsCollector.Collect: 3146.1799
-	WriteGenerics: 3294.1884
-	AllAssemblyConversion: 8832.5052
+	PreProcessStage: 1521.8144
+	GenericsCollector.Collect: 7237.2501
+	WriteGenerics: 10768.9315
+	AllAssemblyConversion: 27247.9203
 
 ----Generated Files----
-Bulk_Assembly-CSharp_0.cpp	2240559
-Bulk_Assembly-CSharp_1.cpp	2683538
+Bulk_Assembly-CSharp_0.cpp	2248985
+Bulk_Assembly-CSharp_1.cpp	2687519
 Bulk_Assembly-CSharp_2.cpp	3283788
-Bulk_Assembly-CSharp_3.cpp	1417207
+Bulk_Assembly-CSharp_3.cpp	1433584
 Bulk_Assembly-CSharp-firstpass_0.cpp	1129594
 Bulk_Generics_0.cpp	3360139
 Bulk_Generics_1.cpp	1040947
@@ -170,7 +170,7 @@ Bulk_System_2.cpp	916485
 Bulk_UnityEngine.AIModule_0.cpp	16652
 Bulk_UnityEngine.AnimationModule_0.cpp	168451
 Bulk_UnityEngine.AudioModule_0.cpp	235267
-Bulk_UnityEngine.CoreModule_0.cpp	827464
+Bulk_UnityEngine.CoreModule_0.cpp	826280
 Bulk_UnityEngine.CoreModule_1.cpp	1071997
 Bulk_UnityEngine.CoreModule_2.cpp	620511
 Bulk_UnityEngine.DirectorModule_0.cpp	6591
@@ -199,7 +199,7 @@ GeneratedVirtualInvokers.h	8596
 GenericMethods0.cpp	3913280
 GenericMethods1.cpp	3399015
 GenericMethods2.cpp	938744
-Il2CppAttributes.cpp	4110229
+Il2CppAttributes.cpp	4109719
 Il2CppCodeRegistration.cpp	1478
 Il2CppCompilerCalculateTypeValues_0Table.cpp	129135
 Il2CppCompilerCalculateTypeValues_10Table.cpp	219509
@@ -232,17 +232,17 @@ Il2CppCompilerCalculateTypeValues_34Table.cpp	238569
 Il2CppCompilerCalculateTypeValues_35Table.cpp	222228
 Il2CppCompilerCalculateTypeValues_36Table.cpp	583049
 Il2CppCompilerCalculateTypeValues_37Table.cpp	634709
-Il2CppCompilerCalculateTypeValues_38Table.cpp	543241
-Il2CppCompilerCalculateTypeValues_39Table.cpp	512671
+Il2CppCompilerCalculateTypeValues_38Table.cpp	545113
+Il2CppCompilerCalculateTypeValues_39Table.cpp	515680
 Il2CppCompilerCalculateTypeValues_3Table.cpp	515932
-Il2CppCompilerCalculateTypeValues_40Table.cpp	317654
+Il2CppCompilerCalculateTypeValues_40Table.cpp	318856
 Il2CppCompilerCalculateTypeValues_4Table.cpp	205893
 Il2CppCompilerCalculateTypeValues_5Table.cpp	130257
 Il2CppCompilerCalculateTypeValues_6Table.cpp	278542
 Il2CppCompilerCalculateTypeValues_7Table.cpp	245753
 Il2CppCompilerCalculateTypeValues_8Table.cpp	219685
 Il2CppCompilerCalculateTypeValues_9Table.cpp	255082
-Il2CppCompilerCalculateTypeValuesTable.cpp	607686
+Il2CppCompilerCalculateTypeValuesTable.cpp	607854
 Il2CppGenericClassTable.cpp	783694
 Il2CppGenericComDefinitions0.cpp	196
 Il2CppGenericInstDefinitions.cpp	725922
@@ -252,10 +252,10 @@ Il2CppGenericMethodTable.cpp	1362625
 Il2CppInteropDataTable.cpp	103726
 Il2CppInvokerTable.cpp	3283700
 Il2CppMetadataRegistration.cpp	1132
-Il2CppMetadataUsage.cpp	3172037
-Il2CppMethodPointerTable.cpp	3492471
+Il2CppMetadataUsage.cpp	3173039
+Il2CppMethodPointerTable.cpp	3493683
 Il2CppReversePInvokeWrapperTable.cpp	790
-Il2CppTypeDefinitions.cpp	4434402
+Il2CppTypeDefinitions.cpp	4435007
 UnlinkedFunctions.cpp	257
 UnresolvedVirtualCallStubs.cpp	356279
 

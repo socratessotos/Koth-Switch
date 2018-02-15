@@ -100,6 +100,27 @@ public class CharacterSelect : MonoBehaviour {
 			if (characterBoxes[i].selectionComplete) completePlayers++;
 		}
 
+        bool onlyOneTeam = true;
+        int lastTeamNumberCheck = 0;
+
+        for (int i = 0; i < characterBoxes.Length; i++) {
+            if (characterBoxes[i].input == null) continue;
+
+            if(GameController.instance.game.currentGameMode == Game.Mode.LASTHAT) {
+                onlyOneTeam = false;
+                break;
+            }
+
+            if (i == 0) lastTeamNumberCheck = characterBoxes[i].teamNumber;
+            else if (characterBoxes[i].teamNumber != lastTeamNumberCheck)
+                onlyOneTeam = false;
+
+        }
+
+        if(onlyOneTeam) {
+            return;
+        }
+
 		if (completePlayers >= 1 && activePlayers == completePlayers) {
 
 			for (int i = 0, l = GameController.instance.playerInputs.Length; i < l; i++) {

@@ -3,6 +3,7 @@ WindowsStandalone
 bbb48df456fdeae268b75ebf5b52fe7a Assembly-CSharp.dll:.RippleEffect
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WaterObject
 afaba8a54b21bfc75cbb7f3bbef43881 Assembly-CSharp.dll:SpriteParticleEmitter.StaticSpriteEmitter
+fad665eb61a412dcc9e0683fab327703 Assembly-CSharp.dll:.TeamsEmblemUI
 7641ea299d18232d0dc1360b709b23f7 Assembly-CSharp.dll:.ScrollingTexture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnThrowAbilities
 f62d1e12c4ea2e5d19ca5a2c81b0bf32 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.TiltShift
@@ -194,7 +195,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 77e2e15bd9f4f7f253fdffcb80127824 Assembly-CSharp.dll:.Menu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RemoveParticleSystem
-7618fd152422312cead430724d227807 Assembly-CSharp.dll:.CharacterColorChanger
+aee705a6e59e469045ebe1a4c288760a Assembly-CSharp.dll:.CharacterColorChanger
 9b66c1621e117c24dc4113de95d98aa7 Assembly-CSharp.dll:.TransferDanger
 22df741b1a3c6d3b215ca28ad83c5a3f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenSpaceAmbientObscurance
 bade9de6d09348ba9b7c8c10129476b5 Assembly-CSharp.dll:.SpriteAbberation
@@ -341,7 +342,7 @@ ad98f79f54b44222289593a422cf5827 Assembly-CSharp.dll:.AnimatedSpriteSheet
 6cf1c57bfa806656b40684de3fe4e23d Assembly-CSharp.dll:.OnDangerFinishAbilities
 4d20f3b1dc1cc163414f753f8013d4e5 Assembly-CSharp.dll:Rewired.UI.ControlMapper.CalibrationWindow
 66d18e0874509f688d83c9b5b39c62ef Assembly-CSharp.dll:.BirdController2D
-5b4389a3b64ee7180dfd7588e7362516 Assembly-CSharp.dll:.GameController
+3e1ef3be6ba3655bd40e5e6030b0a50a Assembly-CSharp.dll:.GameController
 2e2f0e05e679178c817a8a3173469693 Assembly-CSharp.dll:Rewired.Demos.EightPlayersExample_Player
 573fb211955e81a34dfbaf3ce50742de Assembly-CSharp.dll:Rewired.Demos.TouchButtonExample
 945a232305a0017240a88017a2f85f4a Assembly-CSharp.dll:.PickTeamNav
@@ -406,4 +407,3 @@ f5382482d8a0279e2e73be2dc3b6b09c Rewired_Core.dll:Rewired.ComponentControls.Touc
 028f1dd8dcdb0e2ebd379f84c8b344d2 Assembly-CSharp.dll:Rewired.UI.ControlMapper.CanvasScalerFitter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SingleHatWaterfall
 5d71b0d4384013ee958970d95a38680f Assembly-CSharp.dll:SpriteParticleEmitter.DynamicEmitterUI
-fad665eb61a412dcc9e0683fab327703 Assembly-CSharp.dll:.TeamsEmblemUI

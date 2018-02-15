@@ -967,6 +967,26 @@
         <para>Reference to the style object of this element.</para>
       </summary>
     </member>
+    <member name="T:UnityEngine.Experimental.UIElements.VisualElement.MeasureMode">
+      <summary>
+        <para>The modes available to measure VisualElement sizes.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Experimental.UIElements.VisualElement.MeasureMode.AtMost">
+      <summary>
+        <para>At Most. The element should give its preferred width/height but no more than the value passed.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Experimental.UIElements.VisualElement.MeasureMode.Exactly">
+      <summary>
+        <para>The element should give the width/height that is passed in and derive the opposite site from this value (for example, calculate text size from a fixed width).</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.Experimental.UIElements.VisualElement.MeasureMode.Undefined">
+      <summary>
+        <para>The element should give its preferred width/height without any constraint.</para>
+      </summary>
+    </member>
     <member name="M:UnityEngine.Experimental.UIElements.VisualElement.OnStyleResolved(UnityEngine.Experimental.UIElements.StyleSheets.ICustomStyle)">
       <summary>
         <para>Callback when the styles of an object have changed.</para>

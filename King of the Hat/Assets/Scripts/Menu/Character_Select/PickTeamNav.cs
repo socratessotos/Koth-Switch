@@ -122,8 +122,6 @@ public class PickTeamNav : ControllerNav {
     public void ChooseTeam() {
         characterBox.teamNumber = index + 1;
 
-        //characterBox.UpdateTeamTextAndColor();
-
         GameController.instance.game.currentPlayers[characterBox.playerNumber - 1].SetTeamNumber(characterBox.teamNumber);
 
         characterBox.UpdateBannerColor();

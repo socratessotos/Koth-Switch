@@ -52,8 +52,8 @@ public class Afterimage : MonoBehaviour {
 	void OnDisable () {
 
 		for (int i = 0; i < count; i++) {
-
-			children[i].gameObject.SetActive (false);
+            if(children[i] != null)
+			    children[i].gameObject.SetActive (false);
 
 		}
 
@@ -160,8 +160,8 @@ public class Afterimage : MonoBehaviour {
 	void OnDestroy () {
 
 		for (int i = 0; i < count; i++) {
-
-			Destroy (children [i].gameObject);
+            if(children[i] != null)
+			    Destroy (children [i].gameObject);
 
 		}
 

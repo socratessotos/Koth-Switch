@@ -16,9 +16,9 @@ public class InGamePlayerDisplay {
 	public int characterIndex = -1;
 
 	public int skinIndex = 0;
-
 	public int colorIndex = 0;
 
+    public int teamIndex = -1;
 }
 
 public class GameController : MonoBehaviour {

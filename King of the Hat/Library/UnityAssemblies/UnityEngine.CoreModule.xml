@@ -12165,9 +12165,19 @@ Only usable on Android, Windows Phone or Windows Tablets.</para>
         <para>Is advertising tracking enabled.</para>
       </summary>
     </member>
+    <member name="P:UnityEngine.iOS.Device.deferSystemGesturesMode">
+      <summary>
+        <para>Defer system gestures until the second swipe on specific edges.</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.iOS.Device.generation">
       <summary>
         <para>The generation of the device. (Read Only)</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.iOS.Device.hideHomeButton">
+      <summary>
+        <para>Specifies whether the home button should be hidden in the iOS build of this application.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.iOS.Device.systemVersion">
@@ -12684,6 +12694,41 @@ Only usable on Android, Windows Phone or Windows Tablets.</para>
     <member name="P:UnityEngine.iOS.RemoteNotification.userInfo">
       <summary>
         <para>A dictionary for passing custom information to the notified application. (Read Only)</para>
+      </summary>
+    </member>
+    <member name="T:UnityEngine.iOS.SystemGestureDeferMode">
+      <summary>
+        <para>Bit-mask used to control the deferring of system gestures on iOS.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.SystemGestureDeferMode.All">
+      <summary>
+        <para>Identifies all screen edges.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.SystemGestureDeferMode.BottomEdge">
+      <summary>
+        <para>Identifies bottom screen edge.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.SystemGestureDeferMode.LeftEdge">
+      <summary>
+        <para>Identifies left screen edge.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.SystemGestureDeferMode.None">
+      <summary>
+        <para>Disables gesture deferring on all edges.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.SystemGestureDeferMode.RightEdge">
+      <summary>
+        <para>Identifies right screen edge.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.SystemGestureDeferMode.TopEdge">
+      <summary>
+        <para>Identifies top screen edge.</para>
       </summary>
     </member>
     <member name="?:UnityEngine.ISerializationCallbackReceiver">
@@ -25864,7 +25909,7 @@ See RenderTexture.useMipMap.</para>
     </member>
     <member name="P:UnityEngine.RenderTextureDescriptor.vrUsage">
       <summary>
-        <para>If this RenderTexture is a VR eye texture used in stereoscopic rendering, this property decides what special rendering occurs, if any. Instead of setting this manually, use the value returned by GetDefaultVREyeTextureDesc or other VR functions returning a RenderTextureDescriptor.</para>
+        <para>If this RenderTexture is a VR eye texture used in stereoscopic rendering, this property decides what special rendering occurs, if any. Instead of setting this manually, use the value returned by XR.XRSettings.eyeTextureDesc|eyeTextureDesc or other VR functions returning a RenderTextureDescriptor.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.RenderTextureDescriptor.width">
@@ -26728,7 +26773,7 @@ A scene may be invalid if, for example, you tried to open a scene that does not 
     </member>
     <member name="M:UnityEngine.SceneManagement.SceneManager.GetSceneByName(System.String)">
       <summary>
-        <para>Searches through the Scenes added to the SceneManager for a Scene with the given name.</para>
+        <para>Searches through the Scenes loaded for a Scene with the given name.</para>
       </summary>
       <param name="name">Name of Scene to find.</param>
       <returns>
@@ -26737,7 +26782,7 @@ A scene may be invalid if, for example, you tried to open a scene that does not 
     </member>
     <member name="M:UnityEngine.SceneManagement.SceneManager.GetSceneByPath(System.String)">
       <summary>
-        <para>Searches all Scenes added to the SceneManager for a Scene that has the given asset path.</para>
+        <para>Searches all Scenes loaded for a Scene that has the given asset path.</para>
       </summary>
       <param name="scenePath">Path of the Scene. Should be relative to the project folder. Like: "AssetsMyScenesMyScene.unity".</param>
       <returns>
@@ -28996,6 +29041,11 @@ Returns NULL if there is no associated alpha texture for the source sprite. This
     <member name="P:UnityEngine.TextAsset.text">
       <summary>
         <para>The text contents of the .txt file as a string. (Read Only)</para>
+      </summary>
+    </member>
+    <member name="M:UnityEngine.TextAsset.ToString">
+      <summary>
+        <para>Returns the contents of the TextAsset.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Texture">
@@ -32290,7 +32340,7 @@ Useful for restarting a trail from a new position.</para>
     </member>
     <member name="T:UnityEngine.VRTextureUsage">
       <summary>
-        <para>This enum describes how the RenderTexture is used as a VR eye texture. Instead of using the values of this enum manually, use the value returned by GetDefaultVREyeTextureDesc or other VR functions returning a RenderTextureDesc.</para>
+        <para>This enum describes how the RenderTexture is used as a VR eye texture. Instead of using the values of this enum manually, use the value returned by XR.XRSettings.eyeTextureDesc|eyeTextureDesc or other VR functions returning a RenderTextureDescriptor.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.VRTextureUsage.None">

@@ -28,7 +28,7 @@ public class TeamsEmblemUI : MonoBehaviour {
 
         for (int i = 0; i < GameController.instance.game.currentPlayers.Length; i++) {
 
-            if (GameController.instance.game.currentPlayers == null) continue;
+            if (GameController.instance.game.currentPlayers[i] == null) continue;
 
             if (GameController.instance.game.currentPlayers[i].teamNumber == teamNumber) 
                 _nb++;
@@ -57,7 +57,7 @@ public class TeamsEmblemUI : MonoBehaviour {
 
         for(int i = 0; i < GameController.instance.game.currentPlayers.Length; i++) {
 
-            if (GameController.instance.game.currentPlayers == null) continue;
+            if (GameController.instance.game.currentPlayers[i] == null) continue;
             
             if (GameController.instance.game.currentPlayers[i].teamNumber == teamNumber) {
 
