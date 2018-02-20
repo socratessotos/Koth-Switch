@@ -27,6 +27,8 @@ public class Hat : MonoBehaviour {
     public ParticleSystem dangerFireFront;
     float initialFireSize;
 
+    TrailRenderer trail;
+
     [Header("Basic Movement")]
 	public float followSpeed;
 	public float maxRotation;
@@ -64,7 +66,7 @@ public class Hat : MonoBehaviour {
     Vector3 finalHatSize;
     bool isChangingSize = false;
     float changeSizeTimer = 0;
-    float changeSizeTime = 5;
+    float changeSizeTime = 10;
 
     [Header("Dance Properties")]
     public float yImpulse = 0.1f;
@@ -146,6 +148,7 @@ public class Hat : MonoBehaviour {
 		StopCoroutine ("Expand");
         StopCoroutine("HitFlash");
         StopCoroutine("VulnerableFlash");
+        trail.enabled = false;
 
 		sprite.localPosition = initialSpritePosition;
 		sprite.localScale = initialSpriteSize;
@@ -157,6 +160,7 @@ public class Hat : MonoBehaviour {
 		gameObject.layer = transform.parent.gameObject.layer;
 
 		sprite = transform.GetChild (0);
+        trail = sprite.GetComponent<TrailRenderer>();
 		initialSpriteSize = sprite.localScale;
 		initialSpritePosition = sprite.localPosition;
 		controller = GetComponent <HatController> ();
@@ -501,7 +505,8 @@ public class Hat : MonoBehaviour {
     }
 
     public bool isThrowAllowed() {
-		return (!owner.isStunned && !hitFreeze && isCurrentlyAttached);
+		return (!owner.isStunned && !hitFreeze && isCurrentlyAttached 
+        && (owner.teleportState != Player.TeleportState.TELEPORTING));
         
     }
 
@@ -518,6 +523,7 @@ public class Hat : MonoBehaviour {
 
         //PlayThrowImpulseParticles(directionalInput);
         ToggleHatVFX(true);
+        trail.enabled = true;
 
 		collisionSkip = true;
 
@@ -745,6 +751,8 @@ public class Hat : MonoBehaviour {
         StopCoroutine("VulnerableFlash");
         StartCoroutine("VulnerableFlash");
 
+        trail.enabled = true;
+
     }
 
 	public void KnockBack (Vector3 direction, float magnitude) {
@@ -780,6 +788,7 @@ public class Hat : MonoBehaviour {
 
         StopCoroutine("VulnerableFlash");
         StartCoroutine("Expand");
+        trail.enabled = false;
 		EndThrow ();
 
 		isAttaching = true;
@@ -1071,6 +1080,8 @@ public class Hat : MonoBehaviour {
 
         col.color = grad;
         //colFront.color = gradFront;
+
+        trail.colorGradient = PlayerColorManager.instance.players[owner.teamNumber - 1].hatTrailColor;
     }
 
     public GameObject CreateFireForAnotherObject() {

@@ -214,7 +214,7 @@ public class PlayerAnimationVFXController : MonoBehaviour {
 
                     //if descending	
                 } else {
-
+                    
                     if (player.isHovering) {
 
                         //play fall if its not already playing
@@ -264,6 +264,36 @@ public class PlayerAnimationVFXController : MonoBehaviour {
 
             //play hit player sound
             AudioManager.instance.PlaySound("Hit_Player", Vector3.zero);
+
+        }
+
+        if (player.isTeleporting) {
+            
+            if(player.teleportState == Player.TeleportState.TELEPORTING) {
+                if(spriteRenderer.enabled) {
+                    spriteRenderer.enabled = false;
+                    GetComponent<TrailRenderer>().enabled = false;
+                }
+
+                if (player.hat.isCurrentlyAttached || player.hat.isBeingAttached) {
+                    player.hat.spriteRenderer.enabled = false;
+                }
+
+                if (fastFallLines.activeSelf)
+                    ToggleFastFallTrail(false);
+
+            } else if(player.teleportState == Player.TeleportState.POST_HANG) {
+
+                if (!spriteRenderer.enabled) {
+                    spriteRenderer.enabled = true;
+                    GetComponent<TrailRenderer>().enabled = true;
+                }
+
+                if (!player.hat.spriteRenderer.enabled) {
+                    player.hat.spriteRenderer.enabled = true;
+                }
+
+            }
 
         }
 

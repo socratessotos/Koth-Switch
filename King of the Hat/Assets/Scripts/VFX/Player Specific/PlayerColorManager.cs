@@ -9,6 +9,7 @@ public class PlayerColorInfo {
     public Gradient hatFireColor;
     public Gradient hatLoseLifeColor;
     public Color32 playerColor;
+    public Gradient hatTrailColor;
 
 }
 

@@ -138,25 +138,35 @@ public class InputController : MonoBehaviour {
 
 	public static float ConstrainAxisTo16Angles (float axis) {
 
+        float x1 = 0.3f;
+        float x2 = 0.6f;
+        float x3 = 1f;
+
+        #if UNITY_SWITCH
+        x1 = 0.4f;
+        x2 = 0.6f;
+        x3 = 1f;
+        #endif
+
 		if (axis >= 0) {
 
-			if (axis <= 0.3f) {
+			if (axis <= x1) {
 				axis = 0;
-			} else if (axis <= 0.6f){
+			} else if (axis <= x2) {
 				axis = axis;
 			} else {
-				axis = 1f;
+				axis = x3;
 			}
 
 
 		} else {
 
-			if (axis >= -0.3f) {
+			if (axis >= -x1) {
 				axis = 0;
-			} else if (axis >= -0.6f){
+			} else if (axis >= -x2){
 				axis = axis;
 			} else {
-				axis = -1f;
+				axis = -x3;
 			}
 
 		}

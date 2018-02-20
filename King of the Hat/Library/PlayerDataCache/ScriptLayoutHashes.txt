@@ -39,7 +39,7 @@ daabd8d8800a87cff11f866c4d06a232 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EnvironmentalHazard
 87476258953decc47d067d7bb3cb4306 Assembly-CSharp.dll:Rewired.UI.ControlMapper.CustomToggle
 b8fed61020e2dd2eea21c57cd8d74315 Assembly-CSharp.dll:.ModeSelection
-91fb8410fc61256f370399e76bbaf57c Assembly-CSharp.dll:.Dummy
+a5e09d94df38d7b688b143274b616322 Assembly-CSharp.dll:.Dummy
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Rewired.Demos.FallbackJoystickIdentificationDemo
 ecb216f79d0af7402c0898171a384120 Assembly-CSharp.dll:SpriteParticleEmitter.StaticUIImageEmitter
 1ad999c1c59cc66b1257b3f9407287bc Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ColorCorrectionCurves
@@ -113,7 +113,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-1bbde74b61ea59788009abad6ce6bf53 Assembly-CSharp.dll:.PlayerColorManager
+b69e0a3d6cc8fafe4459045bd3798f2a Assembly-CSharp.dll:.PlayerColorManager
 09f1f9460e6f2710e78b3e16c3ec1a7b Assembly-CSharp.dll:.GameModeUI
 fa3618870595d397aed229bafdd5b178 Assembly-CSharp.dll:.Lightning
 71778c9b45c50a65b865c5bc42204043 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
@@ -331,6 +331,7 @@ a51173280b81aed3c792da6e9cebc4cd Assembly-CSharp-firstpass.dll:UnityStandardAsse
 41fa6f5ad8cccf97f357e068f5c43f4c Assembly-CSharp.dll:SpriteParticleEmitter.StaticEmitterContinuousUI
 2f264043a6bb59ca3369df5a4d180e17 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.CameraMotionBlur
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+609608bf689fd3f77b3a151490b7c702 Assembly-CSharp.dll:.Wander
 c202741a616b2c03265993dfa3e6dc45 Assembly-CSharp.dll:.WaterHatFall
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WhileDangerousAbilities
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LiquidDetector
@@ -357,8 +358,9 @@ bc0ae4afd1fe4737ebeb4a5c597ffd21 Assembly-CSharp.dll:Rewired.Integration.UnityUI
 53dbd7baa3c8da2f87828dd70d70dae4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated
 7fc3adfac7efbc0706567dbaca46f637 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Fisheye
 845cec0f5cae9e109f2f339197e666df Assembly-CSharp.dll:Rewired.UI.ControlMapper.ScrollRectSelectableChild
+4a4cf7db682ab3850493ad26133dfd49 Assembly-CSharp.dll:.Seek
 e3c45b48c83ae1ae69c387eae5d88da2 Assembly-CSharp.dll:.WellWrapper
-ed8d5e6383bfbece5ad8aed2e6de3d43 Assembly-CSharp.dll:.Player
+517f4cc3bca2ffe9896897ac146406c4 Assembly-CSharp.dll:.Player
 7fbc83adc085901c207e7cbadffff566 Assembly-CSharp.dll:.DynamicPalette
 04332fe0119d69ab6fd28123f0010803 Assembly-CSharp.dll:.AdvancedCA
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.PostEffectsBase

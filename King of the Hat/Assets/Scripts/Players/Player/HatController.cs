@@ -191,6 +191,29 @@ public class HatController : RaycastController, PlatformController.IMoveable {
                     continue;
                 }
 
+                if(hit.collider.CompareTag("Smash Ball")) {
+
+                    if (hat.isCurrentlyAttached || hat.isBeingAttached) continue;
+
+                    if (hat.isBeingThrown) {
+
+                        hat.ApplyFreezeFrames(5);
+                        hat.owner.ApplyFreezeFrames(5);
+                      
+                        PlayHitEffect(hit, Vector3.zero, hat.velocity, hat.lastVelocity);
+                       
+                        collisions.shouldReflect = true;
+                        hat.collisionSkip = false;
+
+                    } else {
+
+                        hat.collisionSkip = true;
+                        continue;
+
+                    }
+
+                }
+
                 if (hit.collider.CompareTag ("Player")) {
 
                     Player otherPlayer = hit.collider.GetComponent<Player>();
@@ -436,6 +459,30 @@ public class HatController : RaycastController, PlatformController.IMoveable {
                         hat.collisionSkip = false;
 
                     }
+
+                    if (hits[j].collider.CompareTag("Smash Ball")) {
+
+                        if (hat.isCurrentlyAttached || hat.isBeingAttached) continue;
+
+                        if (hat.isBeingThrown) {
+
+                            hat.ApplyFreezeFrames(5);
+                            hat.owner.ApplyFreezeFrames(5);
+
+                            collisions.shouldReflectY = true;
+
+                            //destroy
+                            //gain effect
+
+                        } else {
+
+                            hat.collisionSkip = true;
+                            continue;
+
+                        }
+
+                    }
+                    
 
                     if (hits[j].collider.CompareTag ("Player")) {
 

@@ -98,6 +98,10 @@ public class Controller2D : RaycastController, PlatformController.IMoveable {
 					continue;
 				}
 
+                if (hit.transform.CompareTag("Smash Ball")) {
+                    continue;
+                }
+
                 if (hit.transform.CompareTag("Target")) {
                     continue;
                 }
@@ -173,6 +177,10 @@ public class Controller2D : RaycastController, PlatformController.IMoveable {
                 if (hit.transform.CompareTag("Balloon") && moveAmount.y > 0) {
 					continue;
 				}
+
+                if (hit.transform.CompareTag("Smash Ball")) {
+                    continue;
+                }
 
                 if (hit.transform.CompareTag("Target")) {
                     continue;
@@ -255,15 +263,11 @@ public class Controller2D : RaycastController, PlatformController.IMoveable {
 
 				if (collisions.below && hit.collider.tag == "Player") {
 
-                    if (GetComponent<Player>().isStunned) {
-                        collisions.shouldBounce = true;
-                        continue;
-                    }
-
                     Player other = hit.collider.GetComponent<Player>();
 
                     if (other.isInvulnerable) return;
                     if (other.hat.isBeingAttached) return;
+                    if (GetComponent<Player>().isStunned) return;
 
                     if ((other.hat.isCurrentlyAttached && !other.hat.isBeingAttached) && GetComponent<Player>().GetVelocity().y < -1f && !other.isInvulnerable && GetComponent<Player>().canHurtHat) {
 

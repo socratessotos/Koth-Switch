@@ -88,6 +88,21 @@ public class Player : MonoBehaviour {
 	float hoverImpulse;
     [Space(5)]
 
+    [Header("Teleport")]
+    public bool canTeleport = false;
+    public enum TeleportState { PRE_HANG, TELEPORTING, POST_HANG }
+    [HideInInspector]
+    public TeleportState teleportState;
+    bool teleporting = false;
+    public int teleportsPerJump = 2;
+    int teleportsCompleted = 0;
+    public float teleportMoveSpeed = 50;
+    public float teleportTime = 0.2f;
+    public float teleportHangTime = 0.15f;
+    float teleportTimer;
+    Vector2 teleportDirection;
+    [Space(5)]
+
     [Header("Throw Stats")]
     public float maxChargeTime = 1f;
     [Space(5)]
@@ -191,7 +206,8 @@ public class Player : MonoBehaviour {
     public bool isInvulnerable { get { return invulnerable; } set { invulnerable = value; } }
 	public bool isFootStooled { get { return footStooled; } set { footStooled = value; } }
     public bool isSlidingOnIce { get { return isSliding; } set { isSliding = value; } }
-    
+    public bool isTeleporting { get { return teleporting; } }
+
     [HideInInspector]
     public List<string> kills = new List<string>();
     [HideInInspector]
@@ -283,8 +299,10 @@ public class Player : MonoBehaviour {
 
 		if (controller.collisions.below) {
 			jumpsCompleted = 0;
-			hoversCompleted = 0;
+			hoversCompleted = 0;            
 			superJumping = false;
+
+            if (!teleporting) teleportsCompleted = 0;
 		}
 
         if (controller.collisions.shouldBounce) {
@@ -317,6 +335,16 @@ public class Player : MonoBehaviour {
     public virtual void GetCurrentInput() {
         if (Mathf.Abs(directionalInput.x) <= 0.2f) directionalInput.x = 0;
         if (Mathf.Abs(directionalInput.y) <= 0.2f) directionalInput.y = 0;
+
+        #if UNITY_SWITCH
+        if (controller.collisions.below) {
+            if (directionalInput.x >= 0.5f) directionalInput.x = 1;
+            if (directionalInput.x <= -0.5f) directionalInput.x = -1;
+        }
+
+        if (directionalInput.y >= 0.7f) directionalInput.y = 1;
+        if (directionalInput.y <= -0.7f) directionalInput.y = -1;
+        #endif
 
         if (directionalInput.x >= 0.6f) directionalInput.x = 1;
         if (directionalInput.x <= -0.6f) directionalInput.x = -1;
@@ -397,10 +425,11 @@ public class Player : MonoBehaviour {
         StopDashing();
 
         //if (dashing || hitFreeze) return;
-        
-        if (wallSliding && !controller.collisions.below) {
 
-			if (wallDirX == Mathf.Sign(directionalInput.x) && directionalInput.x != 0) {
+        if (wallSliding && !controller.collisions.below) {
+            teleportsCompleted = 0;
+
+            if (wallDirX == Mathf.Sign(directionalInput.x) && directionalInput.x != 0) {
                 velocity.x = -wallDirX * wallJumpClimb.x;
                 velocity.y = wallJumpClimb.y;
             } else if (directionalInput.x == 0) {
@@ -414,10 +443,10 @@ public class Player : MonoBehaviour {
             UseWallJumpAcceleration();
             Invoke("UseNormalAirAcceleration", wallJumpTime);
 
-		} else if (hoversPerJump > 0 && hoversCompleted < hoversPerJump && (jumpsCompleted > 0 || !controller.collisions.below || jumpsAllowed <= 0)) {
+        } else if (hoversPerJump > 0 && hoversCompleted < hoversPerJump && (jumpsCompleted > 0 || !controller.collisions.below || jumpsAllowed <= 0)) {
 
             if (hoverTimeResets || hoversCompleted == 0) timeToStopHovering = maxHoverTime;
-            
+
             if (timeToStopHovering > 0) {
                 hovering = true;
                 velocity.y = hoverImpulseHeight;
@@ -425,10 +454,17 @@ public class Player : MonoBehaviour {
 
             hoversCompleted++;
 
-			if (controller.collisions.below)
-				canHoverJump = true;
+            if (controller.collisions.below)
+                canHoverJump = true;
 
-		} else if ((controller.collisions.below || jumpsCompleted < jumpsAllowed) && jumpsAllowed > 0) {
+        } else if (canTeleport 
+                && (!teleporting || (teleporting && teleportState == TeleportState.POST_HANG)) 
+                && teleportsPerJump > 0 && teleportsCompleted < teleportsPerJump 
+                && ((jumpsCompleted >= jumpsAllowed) || (jumpsCompleted == 0 && !controller.collisions.below))) {
+
+            StartTeleport(directionalInput);
+
+        } else if ((controller.collisions.below || jumpsCompleted < jumpsAllowed) && jumpsAllowed > 0) {
 //            if (controller.collisions.slidingDownMaxSlope) {
 //                if (directionalInput.x != -Mathf.Sign(controller.collisions.slopeNormal.x)) { // not jumping against max slope
 //                    velocity.y = maxJumpVelocity * controller.collisions.slopeNormal.y;
@@ -466,6 +502,29 @@ public class Player : MonoBehaviour {
 		canHoverJump = false;
 		hoverImpulseTimer = 0;
 
+    }
+
+    void StartTeleport(Vector2 _direction) {
+
+        velocity = Vector3.zero;
+
+        teleporting = true;
+        teleportState = TeleportState.PRE_HANG;
+
+        teleportTimer = teleportHangTime;
+        teleportsCompleted++;
+        teleportDirection = _direction;
+
+        //play fx
+        PlayTeleportEffect();
+    }
+
+    void EndTeleport() {
+
+        teleporting = false;
+        velocity = Vector3.zero;
+
+        //play fx
     }
 
     List<Vector2> pastDirections = new List<Vector2>();
@@ -719,46 +778,93 @@ public class Player : MonoBehaviour {
 
         if (stunned) {
 
-			velocity.x = Mathf.SmoothDamp(velocity.x, 0, ref velocityXSmoothing, accelerationTimeStun);
+            velocity.x = Mathf.SmoothDamp(velocity.x, 0, ref velocityXSmoothing, accelerationTimeStun);
 
-			if (Time.time > endStunTime - 0.3f) {
+            if (Time.time > endStunTime - 0.3f) {
 
-				if (recovering) {
+                if (recovering) {
 
-					if (controller.collisions.below)
-						recovering = false;
+                    if (controller.collisions.below)
+                        recovering = false;
 
-					float stunGradient = Time.time - endStunTime;
+                    float stunGradient = Time.time - endStunTime;
 
-					//targetVelocityX = directionalInput.x * moveSpeed;
-					velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, Mathf.Lerp (accelerationTimeStun, accelerationTimeGrounded, stunGradient * 0.3f));
+                    //targetVelocityX = directionalInput.x * moveSpeed;
+                    velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, Mathf.Lerp(accelerationTimeStun, accelerationTimeGrounded, stunGradient * 0.3f));
 
-					if (stunGradient > 0.3f) {
-						
-						recovering = false;	
-						EndStun();
-					}
+                    if (stunGradient > 0.3f) {
 
-				} else {
-					recovering = true;
-				}
+                        recovering = false;
+                        EndStun();
+                    }
 
-			}
+                } else {
+                    recovering = true;
+                }
 
-			if (controller.collisions.left || controller.collisions.right) {
-				velocity.y += Mathf.Sign(velocity.y) * Mathf.Abs(velocity.x) * 0.3f;
-				velocity.x = (isStunned) ? -velocity.x * 0.3f : -velocity.x * 0.5f; //what % of your speed you retain after befoing knocked against the wall
-				targetVelocityX = -targetVelocityX;
+            }
 
-				//play rebound sound
-				AudioManager.instance.PlaySound ("Rebound", Vector3.zero);
+            if (controller.collisions.left || controller.collisions.right) {
+                velocity.y += Mathf.Sign(velocity.y) * Mathf.Abs(velocity.x) * 0.3f;
+                velocity.x = (isStunned) ? -velocity.x * 0.3f : -velocity.x * 0.5f; //what % of your speed you retain after befoing knocked against the wall
+                targetVelocityX = -targetVelocityX;
 
-			}
+                //play rebound sound
+                AudioManager.instance.PlaySound("Rebound", Vector3.zero);
+
+            }
+
+
+            velocity.y += gravity * 0.85f * Time.fixedDeltaTime;
+            if (velocity.y < -terminalVelocity)
+                velocity.y = -terminalVelocity;
+
+        } else if (teleporting) {
+
+            teleportTimer -= Time.fixedDeltaTime;
+
+            switch (teleportState) {
+
+                case TeleportState.PRE_HANG:
+
+                    velocity = Vector3.zero;
+
+                    if(teleportTimer <= 0) {
+                        teleportState = TeleportState.TELEPORTING;
+                        teleportTimer = teleportTime;
+                        controller.SetDeadMask();
+                    }
+
+                    break;
+
+                case TeleportState.TELEPORTING:
+
+                    velocity = teleportDirection * teleportMoveSpeed;
+
+                    if (teleportTimer <= 0) {
+                        teleportState = TeleportState.POST_HANG;
+                        teleportTimer = teleportHangTime;
+                        controller.SetAliveMask();
+                        PlayTeleportEffect();
+                    }
+
+                    break;
+
+                case TeleportState.POST_HANG:
+
+                    velocity = Vector3.zero;
+
+                    if (teleportTimer <= 0) {
+                        EndTeleport();
+                    }
+
+                    break;
+                default:
+                    break;
+            }
 
             
-			velocity.y += gravity * 0.85f * Time.fixedDeltaTime;
-			if (velocity.y < -terminalVelocity)
-				velocity.y = -terminalVelocity;
+
 
         } else if (dashing) {
 
@@ -767,10 +873,10 @@ public class Player : MonoBehaviour {
             }
 
             currentDashSpeed = Mathf.SmoothDamp(currentDashSpeed, targetDashSpeed, ref currentDashSpeedSmoothing, (targetDashSpeed != 0) ? accelerationTimeDash : deccelerationTimeDash / 1.5f);
-			velocity = new Vector2 (targetDashDirection.x * currentDashSpeed, velocity.y);
+            velocity = new Vector2(targetDashDirection.x * currentDashSpeed, velocity.y);
 
-			if (velocity.y < 1f)
-				velocity.y = -0.5f;
+            if (velocity.y < 1f)
+                velocity.y = -0.5f;
 
             if ((faceDir > 0) ? controller.collisions.right : controller.collisions.left) {
 
@@ -780,58 +886,58 @@ public class Player : MonoBehaviour {
 
             }
 
-		} else if (hovering) {
+        } else if (hovering) {
 
-			if (canHoverX && canHoverY) directionalInput.Normalize ();
-			
-
-			if (canHoverX) {
-				
-				targetVelocityX = directionalInput.x * ((controller.collisions.below ? moveSpeed : airMoveSpeed) + (hat.isCurrentlyAttached ? 0 : hatlessMoveBonus) + (isHovering ? hoverMoveBonusX : 0));
-				velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTimeHover);
-
-			} else {
-				velocity.x = 0;
-
-			}
-
-			if (canHoverY) {
-
-				if (directionalInput.y < 0.3 && canHoverJump) {
-					
-					targetVelocityY = hoverImpulse;
-					hoverImpulseTimer += Time.fixedDeltaTime;
-
-					if (hoverImpulseTimer > totalHoverImpulseTime){
-						canHoverJump = false;
-						hoverImpulseTimer = 0;
-					}
-						
-				
-				} else {
-					
-					targetVelocityY = directionalInput.y * ((controller.collisions.below ? moveSpeed : airMoveSpeed) + (hat.isCurrentlyAttached ? 0 : hatlessMoveBonus) + (isHovering ? hoverMoveBonusY : 0));
-				
-				}
-
-				velocity.y = Mathf.SmoothDamp(velocity.y, targetVelocityY, ref velocityYSmoothing, accelerationTimeHover);
+            if (canHoverX && canHoverY) directionalInput.Normalize();
 
 
-			} else {
-				velocity.y = 0;
-			}
+            if (canHoverX) {
+
+                targetVelocityX = directionalInput.x * ((controller.collisions.below ? moveSpeed : airMoveSpeed) + (hat.isCurrentlyAttached ? 0 : hatlessMoveBonus) + (isHovering ? hoverMoveBonusX : 0));
+                velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTimeHover);
+
+            } else {
+                velocity.x = 0;
+
+            }
+
+            if (canHoverY) {
+
+                if (directionalInput.y < 0.3 && canHoverJump) {
+
+                    targetVelocityY = hoverImpulse;
+                    hoverImpulseTimer += Time.fixedDeltaTime;
+
+                    if (hoverImpulseTimer > totalHoverImpulseTime) {
+                        canHoverJump = false;
+                        hoverImpulseTimer = 0;
+                    }
 
 
-			if (timeToStopHovering > 0.0f) {
-				timeToStopHovering -= Time.fixedDeltaTime;
-			} else {
-				hovering = false;
+                } else {
 
-				if (canHoverY)
-					velocity.y = Mathf.Sign (velocity.y);
-			}
+                    targetVelocityY = directionalInput.y * ((controller.collisions.below ? moveSpeed : airMoveSpeed) + (hat.isCurrentlyAttached ? 0 : hatlessMoveBonus) + (isHovering ? hoverMoveBonusY : 0));
 
-		} else {
+                }
+
+                velocity.y = Mathf.SmoothDamp(velocity.y, targetVelocityY, ref velocityYSmoothing, accelerationTimeHover);
+
+
+            } else {
+                velocity.y = 0;
+            }
+
+
+            if (timeToStopHovering > 0.0f) {
+                timeToStopHovering -= Time.fixedDeltaTime;
+            } else {
+                hovering = false;
+
+                if (canHoverY)
+                    velocity.y = Mathf.Sign(velocity.y);
+            }
+
+        } else {
 
             targetVelocityX = directionalInput.x * ((controller.collisions.below ? moveSpeed : airMoveSpeed) + (hat.isCurrentlyAttached ? 0 : hatlessMoveBonus) + (isHovering ? hoverMoveBonusX : 0));
 
@@ -859,7 +965,7 @@ public class Player : MonoBehaviour {
                 velocity.y += gravity * Time.fixedDeltaTime;
             } else {
 
-				isBouncing = false;
+                isBouncing = false;
                 float isFastFalling = (directionalInput.y <= -0.4) ? 1 : 0;
                 velocity.y += (gravity + (isFastFalling * (fastFallFactor - 1)) * gravity) * Time.fixedDeltaTime;
 
@@ -869,8 +975,8 @@ public class Player : MonoBehaviour {
 
             if (velocity.y < (fastFalling ? -terminalVelocityFastFall : -terminalVelocity)) {
                 velocity.y = (fastFalling ? -terminalVelocityFastFall : -terminalVelocity);
-                
-                if(usingDifferentFallSpeeds && directionalInput.y >= -0.4) {
+
+                if (usingDifferentFallSpeeds && directionalInput.y >= -0.4) {
                     velocity.y = -terminalVelocity;
                     fastFalling = false;
                 }
@@ -1055,6 +1161,12 @@ public class Player : MonoBehaviour {
     void PlayFlyingSoul() {
 
         //GameObject newSoul = Instantiate(soulPrefab, transform.position, Quaternion.identity) as GameObject;
+
+    }
+
+    void PlayTeleportEffect() {
+
+        VFXManager.instance.EmitAtPosition("Teleport", 1, transform.position + Vector3.up * 0.5f, false);
 
     }
 

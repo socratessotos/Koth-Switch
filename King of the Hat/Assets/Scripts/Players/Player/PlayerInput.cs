@@ -78,7 +78,7 @@ public class PlayerInput : MonoBehaviour {
 		Vector2 directionalInput = new Vector2 (input.snapshot.xAxis, input.snapshot.yAxis);
 		player.SetDirectionalInput (directionalInput);
 
-		Vector2 directionalThrowInput = new Vector2 (input.snapshot.xAxisThrow, input.snapshot.yAxisThrow);
+        Vector2 directionalThrowInput = new Vector2 (input.snapshot.xAxisThrow, input.snapshot.yAxisThrow);
 		player.SetDirectionalThrowInput (directionalThrowInput);
 
 		if (input.snapshot.aButton.down) {

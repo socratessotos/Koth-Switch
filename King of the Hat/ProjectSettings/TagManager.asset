@@ -18,6 +18,7 @@ TagManager:
   - TransferDanger
   - MiningCart
   - Ice
+  - Smash Ball
   layers:
   - Default
   - TransparentFX
