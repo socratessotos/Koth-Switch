@@ -6317,11 +6317,11 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
         <para>Make a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
-      <param name="label">Caption/label for the control.</param>
       <param name="enumValue">Enum to use for the flags.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="label">Caption/label for the control.</param>
       <returns>
-        <para>A selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+        <para>The value modified by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumMaskField(UnityEngine.Rect,System.String,System.Enum)">
@@ -6329,11 +6329,11 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
         <para>Make a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
-      <param name="label">Caption/label for the control.</param>
       <param name="enumValue">Enum to use for the flags.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="label">Caption/label for the control.</param>
       <returns>
-        <para>A selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+        <para>The value modified by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumMaskField(UnityEngine.Rect,UnityEngine.GUIContent,System.Enum)">
@@ -6341,11 +6341,11 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
         <para>Make a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
-      <param name="label">Caption/label for the control.</param>
       <param name="enumValue">Enum to use for the flags.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="label">Caption/label for the control.</param>
       <returns>
-        <para>A selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+        <para>The value modified by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumMaskField(UnityEngine.Rect,System.Enum,UnityEngine.GUIStyle)">
@@ -6353,11 +6353,11 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
         <para>Make a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
-      <param name="label">Caption/label for the control.</param>
       <param name="enumValue">Enum to use for the flags.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="label">Caption/label for the control.</param>
       <returns>
-        <para>A selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+        <para>The value modified by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumMaskField(UnityEngine.Rect,System.String,System.Enum,UnityEngine.GUIStyle)">
@@ -6365,11 +6365,11 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
         <para>Make a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
-      <param name="label">Caption/label for the control.</param>
       <param name="enumValue">Enum to use for the flags.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="label">Caption/label for the control.</param>
       <returns>
-        <para>A selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+        <para>The value modified by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumMaskField(UnityEngine.Rect,UnityEngine.GUIContent,System.Enum,UnityEngine.GUIStyle)">
@@ -6377,11 +6377,11 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
         <para>Make a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
-      <param name="label">Caption/label for the control.</param>
       <param name="enumValue">Enum to use for the flags.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="label">Caption/label for the control.</param>
       <returns>
-        <para>A selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+        <para>The value modified by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumMaskField">
@@ -13169,7 +13169,7 @@ More information - https:msdn.microsoft.comen-uslibrary/dn584397(v=vs.110).aspx.
     </member>
     <member name="M:UnityEditor.EditorWindow.Focus">
       <summary>
-        <para>Moves keyboard focus to another EditorWindow.</para>
+        <para>Moves keyboard focus to this EditorWindow.</para>
       </summary>
     </member>
     <member name="M:UnityEditor.EditorWindow.FocusWindowIfItsOpen(System.Type)">
@@ -18154,6 +18154,41 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
         <para>A light status bar, intended for use on dark backgrounds.</para>
       </summary>
     </member>
+    <member name="T:UnityEditor.iOSSystemGestureDeferMode">
+      <summary>
+        <para>Bit-mask used to control the deferring of system gestures on iOS.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSSystemGestureDeferMode.All">
+      <summary>
+        <para>Identifies all screen edges.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSSystemGestureDeferMode.BottomEdge">
+      <summary>
+        <para>Identifies bottom screen edge.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSSystemGestureDeferMode.LeftEdge">
+      <summary>
+        <para>Identifies left screen edge.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSSystemGestureDeferMode.None">
+      <summary>
+        <para>Disables gesture deferring on all edges.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSSystemGestureDeferMode.RightEdge">
+      <summary>
+        <para>Identifies right screen edge.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEditor.iOSSystemGestureDeferMode.TopEdge">
+      <summary>
+        <para>Identifies top screen edge.</para>
+      </summary>
+    </member>
     <member name="T:UnityEditor.iOSTargetDevice">
       <summary>
         <para>Target iOS device.</para>
@@ -21686,7 +21721,7 @@ See Also: PhysicsVisualizationSettings.</para>
     </member>
     <member name="P:UnityEditor.PlayerSettings.statusBarHidden">
       <summary>
-        <para>Returns if status bar should be hidden. Supported on iOS only; on Android, the status bar is always hidden.</para>
+        <para>Should status bar be hidden. Shared between iOS &amp; Android platforms.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.PlayerSettings.stereoRenderingPath">
@@ -22134,11 +22169,6 @@ See Also: PhysicsVisualizationSettings.</para>
     <member name="P:UnityEditor.PlayerSettings.iOS.cameraUsageDescription">
       <summary>
         <para>Describes the reason for access to the user's camera.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEditor.PlayerSettings.iOS.deferSystemGesturesMode">
-      <summary>
-        <para>Defer system gestures until the second swipe on specific edges.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.PlayerSettings.iOS.deferSystemGesturesMode">
@@ -26672,6 +26702,11 @@ See Also:</para>
     <member name="M:UnityEditor.StaticOcclusionCulling.Compute">
       <summary>
         <para>Used to generate static occlusion culling data.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEditor.StaticOcclusionCulling.GenerateInBackground">
+      <summary>
+        <para>Used to compute static occlusion culling data asynchronously.</para>
       </summary>
     </member>
     <member name="M:UnityEditor.StaticOcclusionCulling.GenerateInBackground">

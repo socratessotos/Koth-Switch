@@ -1044,7 +1044,7 @@ MonoBehaviour:
   increasesStunOverTime: 0
   maxHp: 1
   currentHp: 0
-  throwsChangeSize: 1
+  throwsChangeSize: 0
   throwSizeScale: 2
   yImpulse: 0.1
   xImpulse: 0
@@ -1143,9 +1143,9 @@ MonoBehaviour:
   wallJumpTime: 0.25
   wallSlideSpeedMax: 8
   wallSlideFastFallFactor: 3
-  wallJumpClimb: {x: 10, y: 30}
-  wallJumpOff: {x: 30, y: 10}
-  wallLeap: {x: 30, y: 10}
+  wallJumpClimb: {x: 15, y: 30}
+  wallJumpOff: {x: 30, y: 15}
+  wallLeap: {x: 35, y: 20}
   wallStickTime: 0.05
   bounceHeight: 5
   superJumpHeight: 15
@@ -1156,8 +1156,8 @@ MonoBehaviour:
   hasHoverArmor: 0
   canHoverX: 1
   canHoverY: 1
-  hoverImpulseHeight: 2
-  totalHoverImpulseTime: 0.02
+  hoverImpulseHeight: 4
+  totalHoverImpulseTime: 0.1
   canTeleport: 0
   teleportState: 0
   teleportsPerJump: 2

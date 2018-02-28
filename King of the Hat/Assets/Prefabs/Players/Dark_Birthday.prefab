@@ -1145,12 +1145,12 @@ MonoBehaviour:
   followSpeed: 20
   maxRotation: 80
   gravity: 0.15
-  splitFriction: 0
-  dangerousFriction: 1
+  splitFriction: 1
+  dangerousFriction: 0.5
   normalFriction: 1
-  splitDrag: 0
-  dangerousDrag: 0.2
-  normalDrag: 0.2
+  splitDrag: 1
+  dangerousDrag: 0.15
+  normalDrag: 0.3
   maxDistance: 3
   bounceDampening: 0.6
   throwPower: 8

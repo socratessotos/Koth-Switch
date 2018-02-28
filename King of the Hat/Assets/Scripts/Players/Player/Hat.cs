@@ -66,7 +66,7 @@ public class Hat : MonoBehaviour {
     Vector3 finalHatSize;
     bool isChangingSize = false;
     float changeSizeTimer = 0;
-    float changeSizeTime = 10;
+    float changeSizeTime = 15;
 
     [Header("Dance Properties")]
     public float yImpulse = 0.1f;

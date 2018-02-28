@@ -230,7 +230,9 @@ public class Controller2D : RaycastController, PlatformController.IMoveable {
 						continue;
 					}
 
-					if (!hit.collider.GetComponent <Hat> ().isCurrentlyAttached) {
+                    if (hit.collider.GetComponent<Hat>().isBeingAttached) continue;
+
+                    if (!hit.collider.GetComponent <Hat> ().isCurrentlyAttached) {
 
                         if (!hit.collider.GetComponent<Hat>().isBeingThrown && GetComponent<Player>().isStunned)
                             continue;

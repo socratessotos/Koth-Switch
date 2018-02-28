@@ -997,16 +997,16 @@ MonoBehaviour:
   maxRotation: 20
   gravity: 0.2
   splitFriction: 1
-  dangerousFriction: 0.2
+  dangerousFriction: 0.5
   normalFriction: 1.1
   splitDrag: 0
-  dangerousDrag: 0.2
-  normalDrag: 0.2
-  maxDistance: 4.5
+  dangerousDrag: 0.3
+  normalDrag: 0.3
+  maxDistance: 4
   bounceDampening: 0.6
   throwPower: 10
   throwTime: 1
-  throwBlowBack: 60
+  throwBlowBack: 50
   throwStunTime: 0.42
   minThrowHits: 1
   maxThrowHits: 10
