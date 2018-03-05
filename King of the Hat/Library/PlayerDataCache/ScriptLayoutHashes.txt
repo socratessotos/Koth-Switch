@@ -1,4 +1,4 @@
-WindowsStandalone
+
 8e25056bcf4f3cfca7c34a511b07a87d Assembly-CSharp.dll:PowerTools.SpriteAnim
 bbb48df456fdeae268b75ebf5b52fe7a Assembly-CSharp.dll:.RippleEffect
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WaterObject

@@ -234,6 +234,14 @@ public class Player : MonoBehaviour {
             terminalVelocityFastFall = terminalVelocity;
         }
 
+        InitGravityValues();
+        
+        UseNormalAirAcceleration();
+
+    }
+
+    void InitGravityValues() {
+
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
         hatlessMaxJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * (maxJumpHeight + hatlessJumpHeightBonus));
@@ -244,15 +252,17 @@ public class Player : MonoBehaviour {
         bounceOffLavaVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * BOUNCE_OFF_LAVA_HEIGHT);
 
         superJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * superJumpHeight);
-		hoverImpulse = Mathf.Sqrt(2 * Mathf.Abs(gravity) * superJumpHeight);
+        hoverImpulse = Mathf.Sqrt(2 * Mathf.Abs(gravity) * superJumpHeight);
 
-        UseNormalAirAcceleration();
 
     }
 
     public virtual void FixedUpdate() {
 
         if (GameController.instance.game.state == Game.State.PAUSED) return;
+
+        //dev tool
+        if (Input.GetKeyDown(KeyCode.P)) InitGravityValues();
 
         GetCurrentInput();
 
